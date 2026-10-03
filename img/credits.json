@@ -1,0 +1,80 @@
+{
+ "Branford Marsalis": {
+  "img": "img/branford-marsalis.jpg",
+  "licence": "CC BY 2.0",
+  "author": "darlene susco",
+  "source": "https://commons.wikimedia.org/wiki/File:BMarsalis@2011WYPS2.jpg"
+ },
+ "Charlie Parker": {
+  "img": "img/charlie-parker.jpg",
+  "licence": "Public domain",
+  "author": "William P. Gottlieb",
+  "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_Charlie_Parker_in_1947.jpg"
+ },
+ "Don Byas": {
+  "img": "img/don-byas.jpg",
+  "licence": "Public domain",
+  "author": "Unknown photographer",
+  "source": "https://commons.wikimedia.org/wiki/File:Don_Byas_in_the_1940s_croped.jpg"
+ },
+ "Eric Dolphy": {
+  "img": "img/eric-dolphy.jpg",
+  "licence": "Public domain",
+  "author": "Uncredited photo",
+  "source": "https://commons.wikimedia.org/wiki/File:Eric_Dolphy_-_uncredited_photo_in_The_Jazz_Review_-_June_1960_issue.jpg"
+ },
+ "Freddie Hubbard": {
+  "img": "img/freddie-hubbard.jpg",
+  "licence": "CC BY-SA 2.0",
+  "author": "Tom Marcello Webster, New York, USA",
+  "source": "https://commons.wikimedia.org/wiki/File:Freddie_Hubbard_1976.jpg"
+ },
+ "J.J. Johnson": {
+  "img": "img/j-j-johnson.jpg",
+  "licence": "Public domain",
+  "author": "H. N. White Company",
+  "source": "https://commons.wikimedia.org/wiki/File:J._J._Johnson.jpg"
+ },
+ "John Coltrane": {
+  "img": "img/john-coltrane.jpg",
+  "licence": "CC0",
+  "author": "Gelderen, Hugo van / Anefo",
+  "source": "https://commons.wikimedia.org/wiki/File:John_Coltrane_1963_cropped_ver2.jpg"
+ },
+ "Kenny Dorham": {
+  "img": "img/kenny-dorham.jpg",
+  "licence": "Public domain",
+  "author": "THE FRED. GRETSCH MFG. CO.",
+  "source": "https://commons.wikimedia.org/wiki/File:Kenny_Dorham_holding_trumpet.jpg"
+ },
+ "Louis Armstrong": {
+  "img": "img/louis-armstrong.jpg",
+  "licence": "Public domain",
+  "author": "Harry Warnecke / Gus Schoenbaechler",
+  "source": "https://commons.wikimedia.org/wiki/File:Louis_Armstrong_in_Color_(restored).jpg"
+ },
+ "Miles Davis": {
+  "img": "img/miles-davis.jpg",
+  "licence": "CC BY-SA 2.0",
+  "author": "Tom Palumbo from New York City, USA",
+  "source": "https://commons.wikimedia.org/wiki/File:Miles_Davis_by_Palumbo_cropped.jpg"
+ },
+ "Sonny Rollins": {
+  "img": "img/sonny-rollins.jpg",
+  "licence": "Public domain",
+  "author": "Distributed by Milestone Records",
+  "source": "https://commons.wikimedia.org/wiki/File:Sonny_Rollins_1974_press_photo.jpg"
+ },
+ "Steve Coleman": {
+  "img": "img/steve-coleman.jpg",
+  "licence": "Public domain",
+  "author": "No machine-readable author provided. Mbase1235 assumed (based on copyright claims).",
+  "source": "https://commons.wikimedia.org/wiki/File:Steve_Coleman_1611.JPG"
+ },
+ "Wayne Shorter": {
+  "img": "img/wayne-shorter.jpg",
+  "licence": "CC BY 2.0",
+  "author": "Chris Hakkens",
+  "source": "https://commons.wikimedia.org/wiki/File:Wayne-Shorter_in_Amsterdam,_1980.jpg"
+ }
+}

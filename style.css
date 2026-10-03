@@ -1,7 +1,7 @@
 /* Palette lifted verbatim from the FlatNine design system (css/tokens.css),
    token names included, so this page reads as part of the same family and the
    values can be swapped for the hosted stylesheet without renaming anything.
-   Light is the default and the OS preference is deliberately not consulted —
+   Light is the default and the OS preference is deliberately not consulted:
    only an explicit choice, which is what [data-theme] carries. */
 :root {
   --bg-primary: #ffffff;
@@ -62,7 +62,18 @@ header a { color: inherit; }
 .picker button[aria-pressed="true"] {
   background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600;
 }
-.who { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.who { display: flex; align-items: center; gap: .9rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.face-lg {
+  width: 84px; height: 84px; border-radius: 10px; object-fit: cover; flex: none;
+  border: 1px solid var(--border-color); background: var(--bg-tertiary);
+}
+.face-sm {
+  width: 28px; height: 28px; border-radius: 50%; object-fit: cover; flex: none;
+  border: 1px solid var(--border-color); background: var(--bg-tertiary); display: block;
+}
+.face-blank { opacity: .4; }
+.credit { margin: 1rem 0 0; color: var(--text-muted); font-size: .72rem; }
+.credit a { color: inherit; }
 .who h2 { margin: 0; font-size: 1.9rem; letter-spacing: -.02em; }
 .who span { color: var(--text-secondary); font-size: .85rem; }
 
@@ -94,10 +105,13 @@ table.axes td:last-child, table.axes th:last-child { text-align: right; font-var
 }
 
 .bars { display: grid; gap: .55rem; }
-.bar-row { display: grid; grid-template-columns: 9.5rem 1fr auto; gap: .6rem; align-items: center; font-size: .84rem; }
+.bar-row { display: grid; grid-template-columns: 28px 8.5rem 1fr auto; gap: .55rem; align-items: center; font-size: .84rem; }
 .bar-row .nm { color: var(--text-primary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .bar-track { background: var(--accent-light); border-radius: 4px; height: 1.15rem; overflow: hidden; }
-.bar-fill { background: var(--accent); height: 100%; border-radius: 4px; }
+/* display:block is load-bearing. These are spans, and an inline box ignores
+   both width and height, so the fill rendered at zero while the track (a grid
+   item, and therefore blockified) looked fine. Every bar was empty. */
+.bar-fill { display: block; background: var(--accent); height: 100%; border-radius: 4px; }
 .bar-row .v { color: var(--text-secondary); font-variant-numeric: tabular-nums; font-size: .78rem; }
 
 ol.ivs { margin: 0; padding-left: 1.3rem; display: grid; gap: .5rem; }

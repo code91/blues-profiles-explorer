@@ -1,4 +1,4 @@
-/* Blues Profiles explorer — no dependencies, no build step.
+/* Blues Profiles explorer. No dependencies, no build step.
    Everything is read from data/profiles.json, which build/export.py writes
    from the study's own analysis output. */
 (function () {
@@ -8,7 +8,7 @@
   var $ = function (id) { return document.getElementById(id); };
 
   function fmt(v, dp) {
-    if (v === null || v === undefined || isNaN(v)) return '—';
+    if (v === null || v === undefined || isNaN(v)) return 'n/a';
     return Number(v).toFixed(dp === undefined ? 2 : dp);
   }
 
@@ -66,6 +66,11 @@
   }
 
   /* ---- right-hand panel --------------------------------------------- */
+  function faceOf(name) {
+    var a = (DATA && DATA.artists || []).filter(function (x) { return x.name === name; })[0];
+    return a && a.portrait ? a.portrait.img : null;
+  }
+
   function bars(items, opts) {
     if (!items || !items.length) return '<p class="sub">No data for this artist.</p>';
     var vals = items.map(function (r) { return r.value; });
@@ -75,7 +80,10 @@
       // a distance reads "closer = better", so invert the bar for those
       var t = opts.invert ? (hi - r.value) / span : (r.value - lo) / span;
       var pct = 12 + t * 88;
-      return '<div class="bar-row"><span class="nm">' + esc(r.name) + '</span>' +
+      var src = faceOf(r.name);
+      var face = src ? '<img class="face-sm" src="' + esc(src) + '" alt="" width="28" height="28" loading="lazy">'
+                     : '<span class="face-sm face-blank" aria-hidden="true"></span>';
+      return '<div class="bar-row">' + face + '<span class="nm">' + esc(r.name) + '</span>' +
              '<span class="bar-track"><span class="bar-fill" style="width:' + pct.toFixed(1) + '%"></span></span>' +
              '<span class="v">' + fmt(r.value, 3) + '</span></div>';
     }).join('') + '</div>';
@@ -90,12 +98,12 @@
     traj: {
       title: 'Closest trajectory',
       sub: 'Dynamic time warping distance between complexity trajectories across a solo. ' +
-           'This is a distance, so lower is more alike — the bars are drawn inverted to read the same way as the others.',
+           'This is a distance, so lower is more alike, and the bars are drawn inverted to read the same way as the others.',
       render: function (a) { return bars(a.similar_trajectory, { invert: true }); }
     },
     ivs: {
       title: 'Most frequent interval vectors',
-      sub: 'The five this artist reaches for most often — frequency, not distinctiveness. ' +
+      sub: 'The five this artist reaches for most often. This is frequency, not distinctiveness. ' +
            'Read the note count: a phrase touching 11 or 12 of the 12 pitch classes has almost ' +
            'only one possible vector, so a high count there reflects phrase length rather than a choice of sonority.',
       render: function (a) {
@@ -152,6 +160,22 @@
     Array.prototype.forEach.call($('picker').children, function (b) {
       b.setAttribute('aria-pressed', String(b.dataset.name === artist.name));
     });
+
+    var face = $('artist-face'), credit = $('photo-credit');
+    if (artist.portrait && artist.portrait.img) {
+      face.src = artist.portrait.img;
+      face.alt = artist.name;
+      face.hidden = false;
+      // A CC photograph has to carry its author and terms wherever it appears.
+      var who = artist.portrait.author ? artist.portrait.author : 'unknown photographer';
+      credit.innerHTML = 'Portrait: ' + esc(who) + ', ' + esc(artist.portrait.licence || '') +
+        (artist.portrait.source ? ' (<a href="' + esc(artist.portrait.source) +
+          '" rel="noopener">Wikimedia Commons</a>)' : '');
+    } else {
+      face.hidden = true;
+      face.removeAttribute('src');
+      credit.textContent = '';
+    }
     drawRadar(artist);
     renderPanel();
     try { localStorage.setItem('bp:artist', artist.name); } catch (e) { /* private mode */ }
@@ -217,13 +241,21 @@
 
   initTheme();
 
-  fetch('data/profiles.json')
-    .then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
-    .then(boot)
-    .catch(function (err) {
-      $('corpus-line').textContent = 'Could not load data/profiles.json — ' + err.message;
-    });
+  /* The data arrives as a global from data/profiles.js, loaded by a script tag.
+     fetch() is only the fallback, because it cannot be relied on: a page served
+     under a sandbox CSP without allow-same-origin has an opaque origin, where
+     every fetch is cross-origin and blocked, and file:// behaves the same way. */
+  if (window.BLUES_PROFILES) {
+    boot(window.BLUES_PROFILES);
+  } else {
+    fetch('data/profiles.json')
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(boot)
+      .catch(function (err) {
+        $('corpus-line').textContent = 'Could not load the profile data: ' + err.message;
+      });
+  }
 })();

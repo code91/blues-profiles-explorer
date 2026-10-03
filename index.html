@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blues Profiles — explorer</title>
+<title>Blues Profiles explorer</title>
 <meta name="description" content="Cross-artist profiles of improvisational decision-making on blues form, from 48 solos in the Weimar Jazz Database.">
 <link rel="stylesheet" href="style.css">
 <script>
@@ -14,7 +14,7 @@
   try {
     var t = localStorage.getItem('bp:theme');
     document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
-  } catch (e) { /* storage blocked — the attribute in the markup already says light */ }
+  } catch (e) { /* storage blocked; the attribute in the markup already says light */ }
 })();
 </script>
 </head>
@@ -37,14 +37,17 @@
   <nav class="picker" id="picker" aria-label="Choose an artist"></nav>
 
   <div class="who">
-    <h2 id="artist-name">—</h2>
-    <span id="artist-meta"></span>
+    <img id="artist-face" class="face-lg" alt="" width="84" height="84" hidden>
+    <div>
+      <h2 id="artist-name">...</h2>
+      <span id="artist-meta"></span>
+    </div>
   </div>
 
   <div class="grid">
     <section class="card">
       <h3>Profile</h3>
-      <p class="sub">Each axis is min–max normalised across the thirteen artists, so a point means
+      <p class="sub">Each axis is min-max normalised across the thirteen artists, so a point means
          “relative to the others in this corpus”, not an absolute score. Raw values below.</p>
       <svg class="radar" id="radar" viewBox="0 0 460 340" role="img" aria-label="Radar chart of profile metrics"></svg>
       <table class="axes">
@@ -60,20 +63,23 @@
         <button data-tab="ivs"    aria-pressed="false">Frequent intervals</button>
         <button data-tab="granger" aria-pressed="false">Causality</button>
       </div>
-      <h3 id="panel-title">—</h3>
+      <h3 id="panel-title">...</h3>
       <p class="sub" id="panel-sub"></p>
       <div id="panel"></div>
     </section>
   </div>
 
+  <p class="credit" id="photo-credit"></p>
+
   <footer>
     <p>Interval vectors count the six interval classes in a phrase’s pitch-class set, written
        <code>[IC1, IC2, IC3, IC4, IC5, IC6]</code>. Source data: the Weimar Jazz Database (Pfleiderer et al., 2017),
-       restricted to blues form. Every figure here is a projection of the study’s own analysis output —
-       nothing is recomputed in the browser.</p>
+       restricted to blues form. Every figure here is a projection of the study’s own analysis output.
+       Nothing is recomputed in the browser.</p>
     <p id="footer-repo"></p>
   </footer>
 </div>
+<script src="data/profiles.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
