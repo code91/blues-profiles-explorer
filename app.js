@@ -122,10 +122,12 @@
       title: 'Phrase-to-phrase causality',
       sub: 'Does one quantity in a phrase predict another in the phrase that follows? ' +
            'PROACTIVE means the first leads the second; REACTIVE means it trails it. ' +
-           'Gravity is the signed strength of the lead.',
+           'Gravity is the signed strength of the lead. Read the first row with care: ' +
+           'complexity and dissonance correlate at r = 0.99 in this corpus by construction, ' +
+           'since dissonance is a weighted part of the sum that defines complexity.',
       render: function (a) {
         var LABELS = {
-          complexity_to_blues: 'Complexity → blues vocabulary',
+          complexity_to_dissonance: 'Complexity → dissonance',
           complexity_to_anticipation: 'Complexity → anticipation',
           length_to_complexity: 'Phrase length → complexity'
         };

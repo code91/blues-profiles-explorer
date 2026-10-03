@@ -121,7 +121,7 @@ for name in sorted(vocab):
         },
         'anticipation_style': an.get('style'),
         'granger': {
-            'complexity_to_blues': {'direction': g.get('cd_direction'), 'gravity': num(g.get('cd_gravity'))},
+            'complexity_to_dissonance': {'direction': g.get('cd_direction'), 'gravity': num(g.get('cd_gravity'))},
             'complexity_to_anticipation': {'direction': g.get('ca_direction'), 'gravity': num(g.get('ca_gravity'))},
             'length_to_complexity': {'direction': g.get('lc_direction'), 'gravity': num(g.get('lc_gravity'))},
         },

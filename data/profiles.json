@@ -94,7 +94,7 @@
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.019351084113378367
     },
@@ -261,7 +261,7 @@
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.487193409919453
     },
@@ -428,7 +428,7 @@
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -596,7 +596,7 @@
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.00350276379785643
     },
@@ -763,7 +763,7 @@
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -930,7 +930,7 @@
    },
    "anticipation_style": "ANTICIPATOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -1097,7 +1097,7 @@
    },
    "anticipation_style": "ANTICIPATOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -1264,7 +1264,7 @@
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -1432,7 +1432,7 @@
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -1599,7 +1599,7 @@
    },
    "anticipation_style": "ANTICIPATOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -1766,7 +1766,7 @@
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": -0.04041849526277183
     },
@@ -1933,7 +1933,7 @@
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -2100,7 +2100,7 @@
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },

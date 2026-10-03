@@ -95,7 +95,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.019351084113378367
     },
@@ -262,7 +262,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.487193409919453
     },
@@ -429,7 +429,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -597,7 +597,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.00350276379785643
     },
@@ -764,7 +764,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -931,7 +931,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "ANTICIPATOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -1098,7 +1098,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "ANTICIPATOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -1265,7 +1265,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -1433,7 +1433,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -1600,7 +1600,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "ANTICIPATOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -1767,7 +1767,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": -0.04041849526277183
     },
@@ -1934,7 +1934,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
@@ -2101,7 +2101,7 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_blues": {
+    "complexity_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
