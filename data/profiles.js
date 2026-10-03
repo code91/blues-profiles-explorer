@@ -36,9 +36,9 @@ window.BLUES_PROFILES = {
    "note": "mean notes per phrase"
   },
   {
-   "key": "cardinality",
-   "label": "Harmonic density",
-   "note": "mean pitch classes per phrase"
+   "key": "entropy",
+   "label": "Interval entropy",
+   "note": "evenness of interval content, in bits"
   },
   {
    "key": "loading_balance",
@@ -63,9 +63,9 @@ window.BLUES_PROFILES = {
    "min": 10.722222222222221,
    "max": 22.72093023255814
   },
-  "cardinality": {
-   "min": 5.487654320987654,
-   "max": 8.244047619047619
+  "entropy": {
+   "min": 1.9973411375939076,
+   "max": 2.448891139374989
   },
   "loading_balance": {
    "min": -0.1447,
@@ -87,6 +87,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 45.0,
     "phrase_length": 20.04,
     "cardinality": 6.986666666666666,
+    "density": 24.373333333333335,
+    "entropy": 2.272311072254824,
+    "dissonance_ratio": 0.34568417508417504,
     "blues_quotient": 14.666666666666666,
     "blues_breadth": 7.0,
     "blues_commitment": 0.72,
@@ -95,17 +98,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_dissonance": {
-     "direction": "NONE",
-     "gravity": 0.019351084113378367
-    },
-    "complexity_to_anticipation": {
+    "density_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "length_to_complexity": {
+    "density_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_density": {
      "direction": "REACTIVE",
-     "gravity": -0.9271288909212587
+     "gravity": -0.9094667020753335
+    },
+    "density_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "entropy_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.6477289797834782
     }
    },
    "portrait": {
@@ -192,7 +211,7 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "John Coltrane",
-     "value": 0.07727972599296128
+     "value": 0.07727972599296126
     }
    ],
    "radar": [
@@ -225,11 +244,11 @@ window.BLUES_PROFILES = {
      "norm": 0.7766
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 6.986666666666666,
-     "norm": 0.5438
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.272311072254824,
+     "norm": 0.6089
     },
     {
      "key": "loading_balance",
@@ -254,6 +273,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 31.0,
     "phrase_length": 17.681818181818183,
     "cardinality": 7.7727272727272725,
+    "density": 28.568181818181817,
+    "entropy": 2.448891139374989,
+    "dissonance_ratio": 0.3211696510560147,
     "blues_quotient": 11.363636363636363,
     "blues_breadth": 3.0,
     "blues_commitment": 0.5,
@@ -262,15 +284,31 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_dissonance": {
-     "direction": "NONE",
-     "gravity": 0.487193409919453
-    },
-    "complexity_to_anticipation": {
+    "density_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "length_to_complexity": {
+    "density_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_density": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "density_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "entropy_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_bluesiness": {
      "direction": "NONE",
      "gravity": 0.0
     }
@@ -392,11 +430,11 @@ window.BLUES_PROFILES = {
      "norm": 0.58
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 7.7727272727272725,
-     "norm": 0.829
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.448891139374989,
+     "norm": 1.0
     },
     {
      "key": "loading_balance",
@@ -421,6 +459,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 28.0,
     "phrase_length": 12.9,
     "cardinality": 6.433333333333334,
+    "density": 19.8,
+    "entropy": 2.316677989372382,
+    "dissonance_ratio": 0.3328458393458394,
     "blues_quotient": 3.3333333333333335,
     "blues_breadth": 1.0,
     "blues_commitment": 0.16666666666666666,
@@ -429,17 +470,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_dissonance": {
-     "direction": "NONE",
-     "gravity": 0.0
-    },
-    "complexity_to_anticipation": {
+    "density_to_dissonance": {
      "direction": "REACTIVE",
-     "gravity": -0.8429098849792107
+     "gravity": -0.7558278886028752
     },
-    "length_to_complexity": {
+    "density_to_anticipation": {
+     "direction": "REACTIVE",
+     "gravity": -0.7908597427002941
+    },
+    "length_to_density": {
      "direction": "NONE",
      "gravity": 0.0
+    },
+    "density_to_bluesiness": {
+     "direction": "PROACTIVE",
+     "gravity": 0.5857793117559478
+    },
+    "entropy_to_bluesiness": {
+     "direction": "BIDIRECTIONAL",
+     "gravity": 0.6221113407442218
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "PROACTIVE",
+     "gravity": 0.9120315223520601
+    },
+    "length_to_bluesiness": {
+     "direction": "PROACTIVE",
+     "gravity": 0.8927410596692449
     }
    },
    "portrait": {
@@ -510,7 +567,7 @@ window.BLUES_PROFILES = {
    "similar_trajectory": [
     {
      "name": "Miles Davis",
-     "value": 0.08907591122868898
+     "value": 0.089075911228689
     },
     {
      "name": "Louis Armstrong",
@@ -522,7 +579,7 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "J.J. Johnson",
-     "value": 0.1667266443614482
+     "value": 0.16672664436144824
     },
     {
      "name": "Steve Coleman",
@@ -559,11 +616,11 @@ window.BLUES_PROFILES = {
      "norm": 0.1815
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 6.433333333333334,
-     "norm": 0.3431
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.316677989372382,
+     "norm": 0.7072
     },
     {
      "key": "loading_balance",
@@ -589,6 +646,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 55.0,
     "phrase_length": 20.681318681318682,
     "cardinality": 7.7032967032967035,
+    "density": 29.64835164835165,
+    "entropy": 2.3173995001823737,
+    "dissonance_ratio": 0.334510965225251,
     "blues_quotient": 3.296703296703297,
     "blues_breadth": 2.0,
     "blues_commitment": 0.16483516483516483,
@@ -597,17 +657,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_dissonance": {
-     "direction": "NONE",
-     "gravity": 0.00350276379785643
-    },
-    "complexity_to_anticipation": {
-     "direction": "PROACTIVE",
-     "gravity": 0.7161109583847928
-    },
-    "length_to_complexity": {
+    "density_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
+    },
+    "density_to_anticipation": {
+     "direction": "PROACTIVE",
+     "gravity": 0.7399225774530522
+    },
+    "length_to_density": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "density_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.4662812981130795
+    },
+    "entropy_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.5360828373416413
     }
    },
    "portrait": {
@@ -694,7 +770,7 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "J.J. Johnson",
-     "value": 0.09730792083733256
+     "value": 0.0973079208373326
     }
    ],
    "radar": [
@@ -727,11 +803,11 @@ window.BLUES_PROFILES = {
      "norm": 0.83
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 7.7032967032967035,
-     "norm": 0.8038
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.3173995001823737,
+     "norm": 0.7088
     },
     {
      "key": "loading_balance",
@@ -756,6 +832,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 37.0,
     "phrase_length": 17.20689655172414,
     "cardinality": 6.706896551724138,
+    "density": 22.06896551724138,
+    "entropy": 2.329524456610424,
+    "dissonance_ratio": 0.3055526944320047,
     "blues_quotient": 15.517241379310345,
     "blues_breadth": 5.0,
     "blues_commitment": 0.7931034482758621,
@@ -764,15 +843,31 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_dissonance": {
+    "density_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "complexity_to_anticipation": {
+    "density_to_anticipation": {
+     "direction": "PROACTIVE",
+     "gravity": 0.8463248858951424
+    },
+    "length_to_density": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "length_to_complexity": {
+    "density_to_bluesiness": {
+     "direction": "PROACTIVE",
+     "gravity": 0.8633057357678908
+    },
+    "entropy_to_bluesiness": {
+     "direction": "REACTIVE",
+     "gravity": -0.8902013106542191
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "REACTIVE",
+     "gravity": -0.5095046551239194
+    },
+    "length_to_bluesiness": {
      "direction": "NONE",
      "gravity": 0.0
     }
@@ -845,7 +940,7 @@ window.BLUES_PROFILES = {
    "similar_trajectory": [
     {
      "name": "Sonny Rollins",
-     "value": 0.07571862771862772
+     "value": 0.07571862771862771
     },
     {
      "name": "Miles Davis",
@@ -861,7 +956,7 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "Branford Marsalis",
-     "value": 0.09044561388311385
+     "value": 0.09044561388311384
     }
    ],
    "radar": [
@@ -894,11 +989,11 @@ window.BLUES_PROFILES = {
      "norm": 0.5404
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 6.706896551724138,
-     "norm": 0.4423
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.329524456610424,
+     "norm": 0.7357
     },
     {
      "key": "loading_balance",
@@ -923,6 +1018,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 60.0,
     "phrase_length": 14.115384615384615,
     "cardinality": 6.471153846153846,
+    "density": 20.375,
+    "entropy": 2.2485040101639244,
+    "dissonance_ratio": 0.3378097596847597,
     "blues_quotient": 8.653846153846153,
     "blues_breadth": 7.0,
     "blues_commitment": 0.41346153846153844,
@@ -931,17 +1029,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "ANTICIPATOR",
    "granger": {
-    "complexity_to_dissonance": {
+    "density_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "complexity_to_anticipation": {
+    "density_to_anticipation": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "length_to_complexity": {
+    "length_to_density": {
      "direction": "REACTIVE",
-     "gravity": -0.2006170171442837
+     "gravity": -0.20345384151251122
+    },
+    "density_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "entropy_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
     }
    },
    "portrait": {
@@ -1012,15 +1126,15 @@ window.BLUES_PROFILES = {
    "similar_trajectory": [
     {
      "name": "John Coltrane",
-     "value": 0.06506842320261436
+     "value": 0.06506842320261437
     },
     {
      "name": "Sonny Rollins",
-     "value": 0.06979876293951927
+     "value": 0.06979876293951928
     },
     {
      "name": "Steve Coleman",
-     "value": 0.07062269903825877
+     "value": 0.07062269903825878
     },
     {
      "name": "Miles Davis",
@@ -1061,11 +1175,11 @@ window.BLUES_PROFILES = {
      "norm": 0.2828
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 6.471153846153846,
-     "norm": 0.3568
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.2485040101639244,
+     "norm": 0.5562
     },
     {
      "key": "loading_balance",
@@ -1090,6 +1204,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 71.0,
     "phrase_length": 20.05952380952381,
     "cardinality": 8.244047619047619,
+    "density": 32.767857142857146,
+    "entropy": 2.4389985642625076,
+    "dissonance_ratio": 0.32785473785473784,
     "blues_quotient": 2.976190476190476,
     "blues_breadth": 4.0,
     "blues_commitment": 0.15476190476190477,
@@ -1098,17 +1215,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "ANTICIPATOR",
    "granger": {
-    "complexity_to_dissonance": {
+    "density_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "complexity_to_anticipation": {
+    "density_to_anticipation": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "length_to_complexity": {
+    "length_to_density": {
      "direction": "PROACTIVE",
-     "gravity": 0.8292321985249482
+     "gravity": 0.8406383823157089
+    },
+    "density_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "entropy_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "BIDIRECTIONAL",
+     "gravity": -0.08686879137537826
+    },
+    "length_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
     }
    },
    "portrait": {
@@ -1179,23 +1312,23 @@ window.BLUES_PROFILES = {
    "similar_trajectory": [
     {
      "name": "Sonny Rollins",
-     "value": 0.0641538989333107
+     "value": 0.06415389893331067
     },
     {
      "name": "J.J. Johnson",
-     "value": 0.06506842320261436
+     "value": 0.06506842320261437
     },
     {
      "name": "Branford Marsalis",
-     "value": 0.07727972599296128
+     "value": 0.07727972599296126
     },
     {
      "name": "Steve Coleman",
-     "value": 0.07939311373846475
+     "value": 0.07939311373846476
     },
     {
      "name": "Miles Davis",
-     "value": 0.08502090393770674
+     "value": 0.08502090393770673
     }
    ],
    "radar": [
@@ -1228,11 +1361,11 @@ window.BLUES_PROFILES = {
      "norm": 0.7782
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 8.244047619047619,
-     "norm": 1.0
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.4389985642625076,
+     "norm": 0.9781
     },
     {
      "key": "loading_balance",
@@ -1257,6 +1390,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 29.0,
     "phrase_length": 22.72093023255814,
     "cardinality": 7.883720930232558,
+    "density": 31.209302325581394,
+    "entropy": 2.336486289133512,
+    "dissonance_ratio": 0.33247374072955466,
     "blues_quotient": 11.627906976744185,
     "blues_breadth": 4.0,
     "blues_commitment": 0.5581395348837209,
@@ -1265,17 +1401,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_dissonance": {
+    "density_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "complexity_to_anticipation": {
+    "density_to_anticipation": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "length_to_complexity": {
+    "length_to_density": {
      "direction": "NONE",
      "gravity": 0.0
+    },
+    "density_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "entropy_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.5467370748909516
     }
    },
    "portrait": {
@@ -1350,7 +1502,7 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "Steve Coleman",
-     "value": 0.07741863760382277
+     "value": 0.07741863760382275
     },
     {
      "name": "Branford Marsalis",
@@ -1358,11 +1510,11 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "John Coltrane",
-     "value": 0.0944700102263127
+     "value": 0.09447001022631273
     },
     {
      "name": "J.J. Johnson",
-     "value": 0.09516445467075711
+     "value": 0.09516445467075715
     }
    ],
    "radar": [
@@ -1395,11 +1547,11 @@ window.BLUES_PROFILES = {
      "norm": 1.0
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 7.883720930232558,
-     "norm": 0.8693
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.336486289133512,
+     "norm": 0.7511
     },
     {
      "key": "loading_balance",
@@ -1425,6 +1577,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 28.0,
     "phrase_length": 13.3125,
     "cardinality": 5.90625,
+    "density": 16.8125,
+    "entropy": 2.260809237825902,
+    "dissonance_ratio": 0.31839962121212123,
     "blues_quotient": 12.5,
     "blues_breadth": 3.0,
     "blues_commitment": 0.53125,
@@ -1433,17 +1588,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_dissonance": {
+    "density_to_dissonance": {
+     "direction": "NONE",
+     "gravity": -0.8872953662246711
+    },
+    "density_to_anticipation": {
+     "direction": "PROACTIVE",
+     "gravity": 0.16798200597886412
+    },
+    "length_to_density": {
+     "direction": "REACTIVE",
+     "gravity": -0.8678504054227025
+    },
+    "density_to_bluesiness": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "complexity_to_anticipation": {
-     "direction": "PROACTIVE",
-     "gravity": 0.21314692140384772
+    "entropy_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
     },
-    "length_to_complexity": {
-     "direction": "REACTIVE",
-     "gravity": -0.8423872656382859
+    "dissonance_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": -0.7560631043033273
     }
    },
    "portrait": {
@@ -1563,11 +1734,11 @@ window.BLUES_PROFILES = {
      "norm": 0.2159
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 5.90625,
-     "norm": 0.1519
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.260809237825902,
+     "norm": 0.5835
     },
     {
      "key": "loading_balance",
@@ -1592,6 +1763,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 86.0,
     "phrase_length": 10.722222222222221,
     "cardinality": 5.487654320987654,
+    "density": 15.302469135802468,
+    "entropy": 1.9973411375939076,
+    "dissonance_ratio": 0.3188160707605152,
     "blues_quotient": 22.22222222222222,
     "blues_breadth": 12.0,
     "blues_commitment": 0.9135802469135802,
@@ -1600,17 +1774,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "ANTICIPATOR",
    "granger": {
-    "complexity_to_dissonance": {
+    "density_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "complexity_to_anticipation": {
+    "density_to_anticipation": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "length_to_complexity": {
+    "length_to_density": {
      "direction": "NONE",
      "gravity": 0.0
+    },
+    "density_to_bluesiness": {
+     "direction": "PROACTIVE",
+     "gravity": 0.8816435903854176
+    },
+    "entropy_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_bluesiness": {
+     "direction": "PROACTIVE",
+     "gravity": 0.9433041086112057
     }
    },
    "portrait": {
@@ -1685,7 +1875,7 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "Sonny Rollins",
-     "value": 0.07431322583071553
+     "value": 0.07431322583071555
     },
     {
      "name": "Branford Marsalis",
@@ -1697,7 +1887,7 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "Steve Coleman",
-     "value": 0.08261695363144637
+     "value": 0.08261695363144636
     }
    ],
    "radar": [
@@ -1730,10 +1920,10 @@ window.BLUES_PROFILES = {
      "norm": 0.0
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 5.487654320987654,
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 1.9973411375939076,
      "norm": 0.0
     },
     {
@@ -1759,6 +1949,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 82.0,
     "phrase_length": 17.14673913043478,
     "cardinality": 6.260869565217392,
+    "density": 20.233695652173914,
+    "entropy": 2.120533608470907,
+    "dissonance_ratio": 0.30528448302904826,
     "blues_quotient": 16.304347826086957,
     "blues_breadth": 11.0,
     "blues_commitment": 0.6630434782608695,
@@ -1767,17 +1960,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "BALANCED",
    "granger": {
-    "complexity_to_dissonance": {
-     "direction": "NONE",
-     "gravity": -0.04041849526277183
+    "density_to_dissonance": {
+     "direction": "REACTIVE",
+     "gravity": -0.7434461728832344
     },
-    "complexity_to_anticipation": {
+    "density_to_anticipation": {
      "direction": "NONE",
-     "gravity": 0.777366804559486
+     "gravity": 0.0
     },
-    "length_to_complexity": {
+    "length_to_density": {
      "direction": "NONE",
-     "gravity": 0.522264534147762
+     "gravity": 0.0
+    },
+    "density_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "entropy_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "REACTIVE",
+     "gravity": -0.7486120223498217
+    },
+    "length_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
     }
    },
    "portrait": {
@@ -1852,11 +2061,11 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "John Coltrane",
-     "value": 0.0641538989333107
+     "value": 0.06415389893331067
     },
     {
      "name": "J.J. Johnson",
-     "value": 0.06979876293951927
+     "value": 0.06979876293951928
     },
     {
      "name": "Branford Marsalis",
@@ -1864,7 +2073,7 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "Miles Davis",
-     "value": 0.07431322583071553
+     "value": 0.07431322583071555
     }
    ],
    "radar": [
@@ -1897,11 +2106,11 @@ window.BLUES_PROFILES = {
      "norm": 0.5354
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 6.260869565217392,
-     "norm": 0.2805
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.120533608470907,
+     "norm": 0.2728
     },
     {
      "key": "loading_balance",
@@ -1926,6 +2135,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 53.0,
     "phrase_length": 19.584269662921347,
     "cardinality": 8.146067415730338,
+    "density": 32.93258426966292,
+    "entropy": 2.3723882009890516,
+    "dissonance_ratio": 0.3372007393355708,
     "blues_quotient": 6.741573033707865,
     "blues_breadth": 5.0,
     "blues_commitment": 0.2696629213483146,
@@ -1934,17 +2146,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_dissonance": {
+    "density_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "complexity_to_anticipation": {
+    "density_to_anticipation": {
      "direction": "PROACTIVE",
-     "gravity": 0.8139086514227748
+     "gravity": 0.8183540282753438
     },
-    "length_to_complexity": {
+    "length_to_density": {
      "direction": "REACTIVE",
-     "gravity": -0.7070113168401273
+     "gravity": -0.8273698797374298
+    },
+    "density_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "entropy_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "PROACTIVE",
+     "gravity": 0.8137127874894632
+    },
+    "length_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
     }
    },
    "portrait": {
@@ -2019,19 +2247,19 @@ window.BLUES_PROFILES = {
     },
     {
      "name": "J.J. Johnson",
-     "value": 0.07062269903825877
+     "value": 0.07062269903825878
     },
     {
      "name": "Kenny Dorham",
-     "value": 0.07741863760382277
+     "value": 0.07741863760382275
     },
     {
      "name": "Branford Marsalis",
-     "value": 0.07839529914529915
+     "value": 0.07839529914529914
     },
     {
      "name": "John Coltrane",
-     "value": 0.07939311373846475
+     "value": 0.07939311373846476
     }
    ],
    "radar": [
@@ -2064,11 +2292,11 @@ window.BLUES_PROFILES = {
      "norm": 0.7386
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 8.146067415730338,
-     "norm": 0.9645
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.3723882009890516,
+     "norm": 0.8306
     },
     {
      "key": "loading_balance",
@@ -2093,6 +2321,9 @@ window.BLUES_PROFILES = {
     "unique_ivs": 56.0,
     "phrase_length": 12.088888888888889,
     "cardinality": 5.988888888888889,
+    "density": 18.033333333333335,
+    "entropy": 2.1370182434875398,
+    "dissonance_ratio": 0.2898314894981562,
     "blues_quotient": 25.555555555555554,
     "blues_breadth": 8.0,
     "blues_commitment": 0.9555555555555556,
@@ -2101,17 +2332,33 @@ window.BLUES_PROFILES = {
    },
    "anticipation_style": "REACTOR",
    "granger": {
-    "complexity_to_dissonance": {
+    "density_to_dissonance": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "complexity_to_anticipation": {
+    "density_to_anticipation": {
      "direction": "NONE",
      "gravity": 0.0
     },
-    "length_to_complexity": {
+    "length_to_density": {
      "direction": "NONE",
-     "gravity": -0.5881953281712041
+     "gravity": 0.0
+    },
+    "density_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "entropy_to_bluesiness": {
+     "direction": "REACTIVE",
+     "gravity": -0.7648100100661543
+    },
+    "dissonance_to_bluesiness": {
+     "direction": "PROACTIVE",
+     "gravity": 0.4894329498532229
+    },
+    "length_to_bluesiness": {
+     "direction": "NONE",
+     "gravity": 0.0
     }
    },
    "portrait": {
@@ -2231,11 +2478,11 @@ window.BLUES_PROFILES = {
      "norm": 0.1139
     },
     {
-     "key": "cardinality",
-     "label": "Harmonic density",
-     "note": "mean pitch classes per phrase",
-     "raw": 5.988888888888889,
-     "norm": 0.1818
+     "key": "entropy",
+     "label": "Interval entropy",
+     "note": "evenness of interval content, in bits",
+     "raw": 2.1370182434875398,
+     "norm": 0.3093
     },
     {
      "key": "loading_balance",

@@ -122,14 +122,20 @@
       title: 'Phrase-to-phrase causality',
       sub: 'Does one quantity in a phrase predict another in the phrase that follows? ' +
            'PROACTIVE means the first leads the second; REACTIVE means it trails it. ' +
-           'Gravity is the signed strength of the lead. Read the first row with care: ' +
-           'complexity and dissonance correlate at r = 0.99 in this corpus by construction, ' +
-           'since dissonance is a weighted part of the sum that defines complexity.',
+           'Gravity is the signed strength of the lead. Density is the sum of the interval ' +
+           'vector, which equals C(n,2) in the number of distinct pitch classes, so it measures ' +
+           'how many notes a phrase uses rather than how complex it is. Interval entropy is the ' +
+           'measure that is not reducible to size. Dissonance is divided by density for the same ' +
+           'reason: the raw figures correlate at r = 0.99 by construction.',
       render: function (a) {
         var LABELS = {
-          complexity_to_dissonance: 'Complexity → dissonance',
-          complexity_to_anticipation: 'Complexity → anticipation',
-          length_to_complexity: 'Phrase length → complexity'
+          density_to_bluesiness: 'Density → blues vocabulary',
+          dissonance_to_bluesiness: 'Dissonance ratio → blues vocabulary',
+          entropy_to_bluesiness: 'Interval entropy → blues vocabulary',
+          length_to_bluesiness: 'Phrase length → blues vocabulary',
+          density_to_anticipation: 'Density → anticipation',
+          length_to_density: 'Phrase length → density',
+          density_to_dissonance: 'Density → dissonance ratio'
         };
         return '<div class="rel">' + Object.keys(LABELS).map(function (k) {
           var r = a.granger[k] || {}, dir = r.direction || 'NONE';

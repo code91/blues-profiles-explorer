@@ -12,7 +12,7 @@ Companion to the analysis pipeline in
 ## What it shows
 
 - **Profile**: a radar over six measures: vocabulary diversity (type-token ratio), blues
-  quotient, blues breadth, phrase length, harmonic density and anticipation balance. Axes are
+  quotient, blues breadth, phrase length, interval entropy and anticipation balance. Axes are
   min-max normalised *across the thirteen artists*, so a point means "relative to the others in
   this corpus", never an absolute score. The raw value is always printed beneath.
 - **Closest vocabulary**: Jaccard overlap between the sets of interval vectors each artist
@@ -23,7 +23,11 @@ Companion to the analysis pipeline in
 - **Frequent intervals**: the five interval vectors each artist uses most, with the number of
   pitch classes each implies.
 - **Causality**: whether one quantity in a phrase predicts another in the phrase that follows,
-  as a direction (proactive / reactive / none) and a signed gravity.
+  as a direction (proactive / reactive / none) and a signed gravity. Note that *density* is the
+  sum of the interval vector, which equals C(n,2) in the number of distinct pitch classes and so
+  measures how many notes a phrase uses, not how complex it is. Interval entropy is the measure
+  that is not reducible to set size. Dissonance is reported as a ratio to density, because the
+  raw figures correlate at r = 0.99 by construction.
 
 ## A caveat worth reading
 

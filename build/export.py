@@ -45,6 +45,20 @@ granger = {r['performer']: r for r in rows(os.path.join(A, 'granger_results.csv'
 blues = {a['performer']: a for a in load(os.path.join(A, 'blues_stats.json'))['artists']}
 antic = {a['performer']: a for a in load(os.path.join(A, 'anticipation_stats.json'))['artist_profiles']}
 clusters = load(os.path.join(A, 'cluster_analysis.json'))
+
+# Phrase-level series, averaged per artist. Entropy is the complexity measure
+# the IV sum is not; density is that sum, named for what it measures.
+series = defaultdict(lambda: defaultdict(list))
+for r in rows(os.path.join(root, 'data', 'timeseries', 'timeseries_data.csv')):
+    for col in ('density', 'entropy', 'dissonance_ratio'):
+        v = num(r.get(col))
+        if v is not None:
+            series[r['performer']][col].append(v)
+
+
+def mean_of(name, col):
+    vals = series.get(name, {}).get(col) or []
+    return sum(vals) / len(vals) if vals else None
 dtw = load(os.path.join(A, 'dtw_results.json'))
 
 # Portraits, if build/fetch_images.py has been run. Every entry carries its
@@ -92,7 +106,7 @@ for r in jac_rows:
 dtw_names = dtw['performers']
 dtw_dist = {}
 for i, a in enumerate(dtw_names):
-    dtw_dist[a] = {b: dtw['dtw_complexity_matrix'][i][j]
+    dtw_dist[a] = {b: dtw['dtw_density_matrix'][i][j]
                    for j, b in enumerate(dtw_names) if b != a}
 
 artists = []
@@ -113,6 +127,9 @@ for name in sorted(vocab):
             'unique_ivs': num(v['unique_ivs']),
             'phrase_length': num(v['mean_phrase_length']),
             'cardinality': num(v['mean_cardinality']),
+            'density': mean_of(name, 'density'),
+            'entropy': mean_of(name, 'entropy'),
+            'dissonance_ratio': mean_of(name, 'dissonance_ratio'),
             'blues_quotient': num(b.get('blues_quotient')),
             'blues_breadth': num(b.get('blues_vocabulary_breadth')),
             'blues_commitment': num(b.get('blues_commitment_normalized')),
@@ -121,9 +138,13 @@ for name in sorted(vocab):
         },
         'anticipation_style': an.get('style'),
         'granger': {
-            'complexity_to_dissonance': {'direction': g.get('cd_direction'), 'gravity': num(g.get('cd_gravity'))},
-            'complexity_to_anticipation': {'direction': g.get('ca_direction'), 'gravity': num(g.get('ca_gravity'))},
-            'length_to_complexity': {'direction': g.get('lc_direction'), 'gravity': num(g.get('lc_gravity'))},
+            'density_to_dissonance': {'direction': g.get('cd_direction'), 'gravity': num(g.get('cd_gravity'))},
+            'density_to_anticipation': {'direction': g.get('ca_direction'), 'gravity': num(g.get('ca_gravity'))},
+            'length_to_density': {'direction': g.get('lc_direction'), 'gravity': num(g.get('lc_gravity'))},
+            'density_to_bluesiness': {'direction': g.get('cb_direction'), 'gravity': num(g.get('cb_gravity'))},
+            'entropy_to_bluesiness': {'direction': g.get('eb_direction'), 'gravity': num(g.get('eb_gravity'))},
+            'dissonance_to_bluesiness': {'direction': g.get('db_direction'), 'gravity': num(g.get('db_gravity'))},
+            'length_to_bluesiness': {'direction': g.get('lb_direction'), 'gravity': num(g.get('lb_gravity'))},
         },
         'portrait': portraits.get(name),
         'top_ivs': sorted(top_ivs.get(name, []), key=lambda r: r['rank'])[:5],
@@ -141,7 +162,7 @@ RADAR = [
     ('blues_quotient', 'Blues quotient',       '% of phrases using canonical blues IVs'),
     ('blues_breadth',  'Blues breadth',        'distinct blues IVs deployed'),
     ('phrase_length',  'Phrase length',        'mean notes per phrase'),
-    ('cardinality',    'Harmonic density',     'mean pitch classes per phrase'),
+    ('entropy',        'Interval entropy',     'evenness of interval content, in bits'),
     ('loading_balance','Anticipation',         'front-loaded (+) vs back-loaded (-)'),
 ]
 bounds = {}
