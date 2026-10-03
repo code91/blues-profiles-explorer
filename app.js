@@ -13,7 +13,10 @@
   }
 
   /* ---- radar -------------------------------------------------------- */
-  var CX = 180, CY = 150, R = 110;
+  // Room for the labels is the constraint, not the circle: the longest axis
+  // name is wider than the radius, so the box is deliberately much wider
+  // than tall and the outer labels sit at 1.16R.
+  var CX = 230, CY = 165, R = 105, LABEL_R = 1.16;
 
   function point(i, n, frac) {
     var a = (Math.PI * 2 * i / n) - Math.PI / 2;
@@ -24,34 +27,34 @@
     var axes = artist.radar, n = axes.length, svg = $('radar'), parts = [];
     [0.25, 0.5, 0.75, 1].forEach(function (ring) {
       var pts = axes.map(function (_, i) { return point(i, n, ring).join(','); }).join(' ');
-      parts.push('<polygon points="' + pts + '" fill="none" stroke="var(--grid)" stroke-width="1"/>');
+      parts.push('<polygon points="' + pts + '" fill="none" stroke="var(--border-color)" stroke-width="1"/>');
     });
     axes.forEach(function (_, i) {
       var p = point(i, n, 1);
       parts.push('<line x1="' + CX + '" y1="' + CY + '" x2="' + p[0] + '" y2="' + p[1] +
-                 '" stroke="var(--grid)" stroke-width="1"/>');
+                 '" stroke="var(--border-color)" stroke-width="1"/>');
     });
     // the shape itself: a floor of 0.02 keeps a zero from vanishing into the hub
     var shape = axes.map(function (ax, i) {
       return point(i, n, Math.max(0.02, ax.norm)).join(',');
     }).join(' ');
-    parts.push('<polygon points="' + shape + '" fill="var(--fill-soft)" stroke="var(--fill)" ' +
+    parts.push('<polygon points="' + shape + '" fill="var(--accent-light)" stroke="var(--accent)" ' +
                'stroke-width="2" stroke-linejoin="round"/>');
     axes.forEach(function (ax, i) {
       var p = point(i, n, Math.max(0.02, ax.norm));
-      parts.push('<circle cx="' + p[0] + '" cy="' + p[1] + '" r="3" fill="var(--fill)"/>');
+      parts.push('<circle cx="' + p[0] + '" cy="' + p[1] + '" r="3" fill="var(--accent)"/>');
     });
     axes.forEach(function (ax, i) {
-      var p = point(i, n, 1.17), anchor = 'middle';
+      var p = point(i, n, LABEL_R), anchor = 'middle';
       if (p[0] > CX + 6) anchor = 'start';
       else if (p[0] < CX - 6) anchor = 'end';
       parts.push('<text x="' + p[0] + '" y="' + (p[1] + 4) + '" text-anchor="' + anchor +
-                 '" font-size="11" fill="var(--muted)">' + esc(ax.label) + '</text>');
+                 '" font-size="11" fill="var(--text-secondary)">' + esc(ax.label) + '</text>');
     });
     svg.innerHTML = parts.join('');
 
     $('axes-body').innerHTML = axes.map(function (ax) {
-      return '<tr><td>' + esc(ax.label) + '</td><td style="color:var(--muted)">' +
+      return '<tr><td>' + esc(ax.label) + '</td><td style="color:var(--text-secondary)">' +
              esc(ax.note) + '</td><td>' + fmt(ax.raw, ax.key === 'ttr' ? 3 : 2) + '</td></tr>';
     }).join('');
   }
@@ -154,6 +157,32 @@
     try { localStorage.setItem('bp:artist', artist.name); } catch (e) { /* private mode */ }
   }
 
+  /* ---- theme ---------------------------------------------------------
+     Light is the default and the OS preference is deliberately not consulted:
+     only an explicit choice here, remembered per browser. */
+  function applyTheme(mode) {
+    document.documentElement.setAttribute('data-theme', mode);
+    var dark = mode === 'dark';
+    var btn = $('theme');
+    if (!btn) return;
+    btn.setAttribute('aria-pressed', String(dark));
+    $('theme-icon').textContent = dark ? '☀' : '☾';
+    $('theme-label').textContent = dark ? 'Light' : 'Dark';
+  }
+
+  function initTheme() {
+    var mode = 'light';
+    try { if (localStorage.getItem('bp:theme') === 'dark') mode = 'dark'; } catch (e) { /* ignore */ }
+    applyTheme(mode);
+    var btn = $('theme');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      try { localStorage.setItem('bp:theme', next); } catch (e) { /* ignore */ }
+    });
+  }
+
   function boot(d) {
     DATA = d;
     var c = d.corpus;
@@ -185,6 +214,8 @@
     var start = d.artists.filter(function (x) { return x.name === want; })[0] || d.artists[0];
     select(start);
   }
+
+  initTheme();
 
   fetch('data/profiles.json')
     .then(function (r) {

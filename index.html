@@ -1,17 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blues Profiles — explorer</title>
 <meta name="description" content="Cross-artist profiles of improvisational decision-making on blues form, from 48 solos in the Weimar Jazz Database.">
 <link rel="stylesheet" href="style.css">
+<script>
+/* Settle the theme before first paint, so a reader who chose dark never sees a
+   flash of light. Light is the default: the OS preference is not consulted, only
+   an explicit choice made here. */
+(function () {
+  try {
+    var t = localStorage.getItem('bp:theme');
+    document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+  } catch (e) { /* storage blocked — the attribute in the markup already says light */ }
+})();
+</script>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>Blues Profiles</h1>
-    <p id="corpus-line">Loading…</p>
+    <div class="head-row">
+      <div>
+        <h1>Blues Profiles</h1>
+        <p id="corpus-line">Loading…</p>
+      </div>
+      <button type="button" id="theme" class="theme-btn" aria-pressed="false"
+              title="Switch between light and dark">
+        <span aria-hidden="true" id="theme-icon">☾</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
   </header>
 
   <nav class="picker" id="picker" aria-label="Choose an artist"></nav>
@@ -26,7 +46,7 @@
       <h3>Profile</h3>
       <p class="sub">Each axis is min–max normalised across the thirteen artists, so a point means
          “relative to the others in this corpus”, not an absolute score. Raw values below.</p>
-      <svg class="radar" id="radar" viewBox="0 0 360 320" role="img" aria-label="Radar chart of profile metrics"></svg>
+      <svg class="radar" id="radar" viewBox="0 0 460 340" role="img" aria-label="Radar chart of profile metrics"></svg>
       <table class="axes">
         <thead><tr><th>Axis</th><th>Measure</th><th>Value</th></tr></thead>
         <tbody id="axes-body"></tbody>
