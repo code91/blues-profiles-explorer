@@ -1,0 +1,2171 @@
+{
+ "generated_from": "blues-profiles analysis outputs (scripts 01-09)",
+ "corpus": {
+  "solos": 48,
+  "artists": 13,
+  "phrases": 1170,
+  "instruments": [
+   "alto saxophone",
+   "bass clarinet",
+   "cornet",
+   "tenor saxophone",
+   "trombone",
+   "trumpet"
+  ]
+ },
+ "radar_axes": [
+  {
+   "key": "ttr",
+   "label": "Vocabulary diversity",
+   "note": "type-token ratio"
+  },
+  {
+   "key": "blues_quotient",
+   "label": "Blues quotient",
+   "note": "% of phrases using canonical blues IVs"
+  },
+  {
+   "key": "blues_breadth",
+   "label": "Blues breadth",
+   "note": "distinct blues IVs deployed"
+  },
+  {
+   "key": "phrase_length",
+   "label": "Phrase length",
+   "note": "mean notes per phrase"
+  },
+  {
+   "key": "cardinality",
+   "label": "Harmonic density",
+   "note": "mean pitch classes per phrase"
+  },
+  {
+   "key": "loading_balance",
+   "label": "Anticipation",
+   "note": "front-loaded (+) vs back-loaded (-)"
+  }
+ ],
+ "bounds": {
+  "ttr": {
+   "min": 0.4226190476190476,
+   "max": 0.9333333333333333
+  },
+  "blues_quotient": {
+   "min": 2.976190476190476,
+   "max": 25.555555555555554
+  },
+  "blues_breadth": {
+   "min": 1.0,
+   "max": 12.0
+  },
+  "phrase_length": {
+   "min": 10.722222222222221,
+   "max": 22.72093023255814
+  },
+  "cardinality": {
+   "min": 5.487654320987654,
+   "max": 8.244047619047619
+  },
+  "loading_balance": {
+   "min": -0.1447,
+   "max": 0.2238
+  }
+ },
+ "artists": [
+  {
+   "name": "Branford Marsalis",
+   "instruments": [
+    "tenor saxophone"
+   ],
+   "solos": 3,
+   "phrases": 75,
+   "style": "POSTBOP",
+   "cluster": 3,
+   "metrics": {
+    "ttr": 0.6,
+    "unique_ivs": 45.0,
+    "phrase_length": 20.04,
+    "cardinality": 6.986666666666666,
+    "blues_quotient": 14.666666666666666,
+    "blues_breadth": 7.0,
+    "blues_commitment": 0.72,
+    "loading_balance": 0.0535,
+    "convergence": 0.5105
+   },
+   "anticipation_style": "BALANCED",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.019351084113378367
+    },
+    "complexity_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_complexity": {
+     "direction": "REACTIVE",
+     "gravity": -0.9271288909212587
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[10, 10, 10, 10, 10, 5]",
+     "count": 6,
+     "proportion": 0.08,
+     "notes": 11
+    },
+    {
+     "rank": 2,
+     "iv": "[2, 5, 4, 3, 6, 1]",
+     "count": 4,
+     "proportion": 0.05333333333333334,
+     "notes": 7
+    },
+    {
+     "rank": 3,
+     "iv": "[4, 6, 5, 4, 7, 2]",
+     "count": 4,
+     "proportion": 0.05333333333333334,
+     "notes": 8
+    },
+    {
+     "rank": 4,
+     "iv": "[2, 3, 3, 2, 4, 1]",
+     "count": 4,
+     "proportion": 0.05333333333333334,
+     "notes": 6
+    },
+    {
+     "rank": 5,
+     "iv": "[1, 2, 2, 1, 3, 1]",
+     "count": 3,
+     "proportion": 0.04,
+     "notes": 5
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "J.J. Johnson",
+     "value": 0.34615384615384615
+    },
+    {
+     "name": "Charlie Parker",
+     "value": 0.3333333333333333
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.3181818181818182
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.30927835051546393
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.297029702970297
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Eric Dolphy",
+     "value": 0.061214610042735026
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.07004332672436125
+    },
+    {
+     "name": "Wayne Shorter",
+     "value": 0.07247318238340336
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.07560068675037811
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.07727972599296128
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.6,
+     "norm": 0.3473
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 14.666666666666666,
+     "norm": 0.5178
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 7.0,
+     "norm": 0.5455
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 20.04,
+     "norm": 0.7766
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 6.986666666666666,
+     "norm": 0.5438
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": 0.0535,
+     "norm": 0.5379
+    }
+   ]
+  },
+  {
+   "name": "Charlie Parker",
+   "instruments": [
+    "alto saxophone"
+   ],
+   "solos": 3,
+   "phrases": 44,
+   "style": "BEBOP",
+   "cluster": 1,
+   "metrics": {
+    "ttr": 0.7045454545454546,
+    "unique_ivs": 31.0,
+    "phrase_length": 17.681818181818183,
+    "cardinality": 7.7727272727272725,
+    "blues_quotient": 11.363636363636363,
+    "blues_breadth": 3.0,
+    "blues_commitment": 0.5,
+    "loading_balance": -0.0721,
+    "convergence": 0.5566
+   },
+   "anticipation_style": "REACTOR",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.487193409919453
+    },
+    "complexity_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_complexity": {
+     "direction": "NONE",
+     "gravity": 0.0
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[6, 7, 7, 6, 7, 3]",
+     "count": 6,
+     "proportion": 0.13636363636363635,
+     "notes": 9
+    },
+    {
+     "rank": 2,
+     "iv": "[8, 8, 9, 8, 8, 4]",
+     "count": 4,
+     "proportion": 0.09090909090909091,
+     "notes": 10
+    },
+    {
+     "rank": 3,
+     "iv": "[2, 2, 2, 2, 2, 0]",
+     "count": 2,
+     "proportion": 0.045454545454545456,
+     "notes": 5
+    },
+    {
+     "rank": 4,
+     "iv": "[2, 5, 4, 3, 6, 1]",
+     "count": 2,
+     "proportion": 0.045454545454545456,
+     "notes": 7
+    },
+    {
+     "rank": 5,
+     "iv": "[8, 8, 8, 8, 9, 4]",
+     "count": 2,
+     "proportion": 0.045454545454545456,
+     "notes": 10
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "Branford Marsalis",
+     "value": 0.3333333333333333
+    },
+    {
+     "name": "Steve Coleman",
+     "value": 0.2923076923076923
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.28169014084507044
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.2717391304347826
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.25925925925925924
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Steve Coleman",
+     "value": 0.12492127755285648
+    },
+    {
+     "name": "Eric Dolphy",
+     "value": 0.12778846153846152
+    },
+    {
+     "name": "Wayne Shorter",
+     "value": 0.12930888070390836
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.1355578449328449
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.1416877104377104
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.7045454545454546,
+     "norm": 0.552
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 11.363636363636363,
+     "norm": 0.3715
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 3.0,
+     "norm": 0.1818
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 17.681818181818183,
+     "norm": 0.58
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 7.7727272727272725,
+     "norm": 0.829
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": -0.0721,
+     "norm": 0.197
+    }
+   ]
+  },
+  {
+   "name": "Don Byas",
+   "instruments": [
+    "tenor saxophone"
+   ],
+   "solos": 3,
+   "phrases": 30,
+   "style": "SWING",
+   "cluster": 3,
+   "metrics": {
+    "ttr": 0.9333333333333333,
+    "unique_ivs": 28.0,
+    "phrase_length": 12.9,
+    "cardinality": 6.433333333333334,
+    "blues_quotient": 3.3333333333333335,
+    "blues_breadth": 1.0,
+    "blues_commitment": 0.16666666666666666,
+    "loading_balance": 0.1145,
+    "convergence": 0.488
+   },
+   "anticipation_style": "BALANCED",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "complexity_to_anticipation": {
+     "direction": "REACTIVE",
+     "gravity": -0.8429098849792107
+    },
+    "length_to_complexity": {
+     "direction": "NONE",
+     "gravity": 0.0
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[5, 5, 5, 5, 5, 3]",
+     "count": 2,
+     "proportion": 0.06666666666666667,
+     "notes": 8
+    },
+    {
+     "rank": 2,
+     "iv": "[5, 5, 4, 3, 3, 1]",
+     "count": 2,
+     "proportion": 0.06666666666666667,
+     "notes": 7
+    },
+    {
+     "rank": 3,
+     "iv": "[4, 6, 5, 4, 7, 2]",
+     "count": 1,
+     "proportion": 0.03333333333333333,
+     "notes": 8
+    },
+    {
+     "rank": 4,
+     "iv": "[12, 12, 12, 12, 12, 6]",
+     "count": 1,
+     "proportion": 0.03333333333333333,
+     "notes": 12
+    },
+    {
+     "rank": 5,
+     "iv": "[3, 4, 4, 4, 3, 3]",
+     "count": 1,
+     "proportion": 0.03333333333333333,
+     "notes": 7
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "John Coltrane",
+     "value": 0.2073170731707317
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.2054794520547945
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.1875
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.1827956989247312
+    },
+    {
+     "name": "Eric Dolphy",
+     "value": 0.16901408450704225
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Miles Davis",
+     "value": 0.08907591122868898
+    },
+    {
+     "name": "Louis Armstrong",
+     "value": 0.1353968253968254
+    },
+    {
+     "name": "Freddie Hubbard",
+     "value": 0.14871232839982837
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.1667266443614482
+    },
+    {
+     "name": "Steve Coleman",
+     "value": 0.17157760540113473
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.9333333333333333,
+     "norm": 1.0
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 3.3333333333333335,
+     "norm": 0.0158
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 1.0,
+     "norm": 0.0
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 12.9,
+     "norm": 0.1815
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 6.433333333333334,
+     "norm": 0.3431
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": 0.1145,
+     "norm": 0.7034
+    }
+   ]
+  },
+  {
+   "name": "Eric Dolphy",
+   "instruments": [
+    "alto saxophone",
+    "bass clarinet"
+   ],
+   "solos": 3,
+   "phrases": 91,
+   "style": "POSTBOP",
+   "cluster": 1,
+   "metrics": {
+    "ttr": 0.6043956043956044,
+    "unique_ivs": 55.0,
+    "phrase_length": 20.681318681318682,
+    "cardinality": 7.7032967032967035,
+    "blues_quotient": 3.296703296703297,
+    "blues_breadth": 2.0,
+    "blues_commitment": 0.16483516483516483,
+    "loading_balance": 0.0266,
+    "convergence": 0.5183
+   },
+   "anticipation_style": "REACTOR",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.00350276379785643
+    },
+    "complexity_to_anticipation": {
+     "direction": "PROACTIVE",
+     "gravity": 0.7161109583847928
+    },
+    "length_to_complexity": {
+     "direction": "NONE",
+     "gravity": 0.0
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[10, 10, 10, 10, 10, 5]",
+     "count": 17,
+     "proportion": 0.18681318681318682,
+     "notes": 11
+    },
+    {
+     "rank": 2,
+     "iv": "[8, 9, 8, 8, 8, 4]",
+     "count": 5,
+     "proportion": 0.054945054945054944,
+     "notes": 10
+    },
+    {
+     "rank": 3,
+     "iv": "[12, 12, 12, 12, 12, 6]",
+     "count": 4,
+     "proportion": 0.04395604395604396,
+     "notes": 12
+    },
+    {
+     "rank": 4,
+     "iv": "[4, 4, 4, 4, 4, 1]",
+     "count": 3,
+     "proportion": 0.03296703296703297,
+     "notes": 7
+    },
+    {
+     "rank": 5,
+     "iv": "[3, 5, 3, 4, 4, 2]",
+     "count": 3,
+     "proportion": 0.03296703296703297,
+     "notes": 7
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "John Coltrane",
+     "value": 0.2857142857142857
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.26851851851851855
+    },
+    {
+     "name": "Freddie Hubbard",
+     "value": 0.2602739726027397
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.24778761061946902
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.2345679012345679
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Branford Marsalis",
+     "value": 0.061214610042735026
+    },
+    {
+     "name": "Wayne Shorter",
+     "value": 0.06854322013161789
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.07934220409220412
+    },
+    {
+     "name": "Freddie Hubbard",
+     "value": 0.08648010991760995
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.09730792083733256
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.6043956043956044,
+     "norm": 0.3559
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 3.296703296703297,
+     "norm": 0.0142
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 2.0,
+     "norm": 0.0909
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 20.681318681318682,
+     "norm": 0.83
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 7.7032967032967035,
+     "norm": 0.8038
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": 0.0266,
+     "norm": 0.4649
+    }
+   ]
+  },
+  {
+   "name": "Freddie Hubbard",
+   "instruments": [
+    "trumpet"
+   ],
+   "solos": 3,
+   "phrases": 58,
+   "style": "POSTBOP",
+   "cluster": 3,
+   "metrics": {
+    "ttr": 0.6379310344827587,
+    "unique_ivs": 37.0,
+    "phrase_length": 17.20689655172414,
+    "cardinality": 6.706896551724138,
+    "blues_quotient": 15.517241379310345,
+    "blues_breadth": 5.0,
+    "blues_commitment": 0.7931034482758621,
+    "loading_balance": 0.0882,
+    "convergence": 0.5495
+   },
+   "anticipation_style": "BALANCED",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "complexity_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_complexity": {
+     "direction": "NONE",
+     "gravity": 0.0
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[2, 3, 3, 2, 4, 1]",
+     "count": 5,
+     "proportion": 0.08620689655172414,
+     "notes": 6
+    },
+    {
+     "rank": 2,
+     "iv": "[1, 1, 2, 0, 1, 1]",
+     "count": 5,
+     "proportion": 0.08620689655172414,
+     "notes": 4
+    },
+    {
+     "rank": 3,
+     "iv": "[1, 2, 2, 1, 3, 1]",
+     "count": 4,
+     "proportion": 0.06896551724137931,
+     "notes": 5
+    },
+    {
+     "rank": 4,
+     "iv": "[6, 7, 7, 6, 7, 3]",
+     "count": 3,
+     "proportion": 0.05172413793103448,
+     "notes": 9
+    },
+    {
+     "rank": 5,
+     "iv": "[10, 10, 10, 10, 10, 5]",
+     "count": 2,
+     "proportion": 0.034482758620689655,
+     "notes": 11
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "Wayne Shorter",
+     "value": 0.32857142857142857
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.3108108108108108
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.30120481927710846
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.29473684210526313
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.28125
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Sonny Rollins",
+     "value": 0.07571862771862772
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.07600075273686387
+    },
+    {
+     "name": "Eric Dolphy",
+     "value": 0.08648010991760995
+    },
+    {
+     "name": "Wayne Shorter",
+     "value": 0.08775935968615528
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.09044561388311385
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.6379310344827587,
+     "norm": 0.4216
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 15.517241379310345,
+     "norm": 0.5554
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 5.0,
+     "norm": 0.3636
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 17.20689655172414,
+     "norm": 0.5404
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 6.706896551724138,
+     "norm": 0.4423
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": 0.0882,
+     "norm": 0.632
+    }
+   ]
+  },
+  {
+   "name": "J.J. Johnson",
+   "instruments": [
+    "trombone"
+   ],
+   "solos": 3,
+   "phrases": 104,
+   "style": "BEBOP",
+   "cluster": 3,
+   "metrics": {
+    "ttr": 0.5769230769230769,
+    "unique_ivs": 60.0,
+    "phrase_length": 14.115384615384615,
+    "cardinality": 6.471153846153846,
+    "blues_quotient": 8.653846153846153,
+    "blues_breadth": 7.0,
+    "blues_commitment": 0.41346153846153844,
+    "loading_balance": 0.1554,
+    "convergence": 0.5257
+   },
+   "anticipation_style": "ANTICIPATOR",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "complexity_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_complexity": {
+     "direction": "REACTIVE",
+     "gravity": -0.2006170171442837
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[2, 5, 4, 3, 6, 1]",
+     "count": 5,
+     "proportion": 0.04807692307692308,
+     "notes": 7
+    },
+    {
+     "rank": 2,
+     "iv": "[10, 10, 10, 10, 10, 5]",
+     "count": 4,
+     "proportion": 0.038461538461538464,
+     "notes": 11
+    },
+    {
+     "rank": 3,
+     "iv": "[8, 8, 8, 8, 9, 4]",
+     "count": 4,
+     "proportion": 0.038461538461538464,
+     "notes": 10
+    },
+    {
+     "rank": 4,
+     "iv": "[6, 7, 7, 6, 7, 3]",
+     "count": 4,
+     "proportion": 0.038461538461538464,
+     "notes": 9
+    },
+    {
+     "rank": 5,
+     "iv": "[3, 2, 1, 0, 0, 0]",
+     "count": 4,
+     "proportion": 0.038461538461538464,
+     "notes": 4
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "John Coltrane",
+     "value": 0.37894736842105264
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.37735849056603776
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.3523809523809524
+    },
+    {
+     "name": "Wayne Shorter",
+     "value": 0.3488372093023256
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.34615384615384615
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "John Coltrane",
+     "value": 0.06506842320261436
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.06979876293951927
+    },
+    {
+     "name": "Steve Coleman",
+     "value": 0.07062269903825877
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.07323892519970952
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.07884168213636536
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.5769230769230769,
+     "norm": 0.3021
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 8.653846153846153,
+     "norm": 0.2515
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 7.0,
+     "norm": 0.5455
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 14.115384615384615,
+     "norm": 0.2828
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 6.471153846153846,
+     "norm": 0.3568
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": 0.1554,
+     "norm": 0.8144
+    }
+   ]
+  },
+  {
+   "name": "John Coltrane",
+   "instruments": [
+    "tenor saxophone"
+   ],
+   "solos": 5,
+   "phrases": 168,
+   "style": "POSTBOP",
+   "cluster": 1,
+   "metrics": {
+    "ttr": 0.4226190476190476,
+    "unique_ivs": 71.0,
+    "phrase_length": 20.05952380952381,
+    "cardinality": 8.244047619047619,
+    "blues_quotient": 2.976190476190476,
+    "blues_breadth": 4.0,
+    "blues_commitment": 0.15476190476190477,
+    "loading_balance": 0.1529,
+    "convergence": 0.5675
+   },
+   "anticipation_style": "ANTICIPATOR",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "complexity_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_complexity": {
+     "direction": "PROACTIVE",
+     "gravity": 0.8292321985249482
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[10, 10, 10, 10, 10, 5]",
+     "count": 23,
+     "proportion": 0.13690476190476192,
+     "notes": 11
+    },
+    {
+     "rank": 2,
+     "iv": "[12, 12, 12, 12, 12, 6]",
+     "count": 14,
+     "proportion": 0.08333333333333333,
+     "notes": 12
+    },
+    {
+     "rank": 3,
+     "iv": "[8, 8, 8, 8, 9, 4]",
+     "count": 11,
+     "proportion": 0.06547619047619048,
+     "notes": 10
+    },
+    {
+     "rank": 4,
+     "iv": "[6, 7, 7, 6, 7, 3]",
+     "count": 9,
+     "proportion": 0.05357142857142857,
+     "notes": 9
+    },
+    {
+     "rank": 5,
+     "iv": "[2, 5, 4, 3, 6, 1]",
+     "count": 7,
+     "proportion": 0.041666666666666664,
+     "notes": 7
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "Sonny Rollins",
+     "value": 0.4166666666666667
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.37894736842105264
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.3652173913043478
+    },
+    {
+     "name": "Wayne Shorter",
+     "value": 0.3229166666666667
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.3181818181818182
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Sonny Rollins",
+     "value": 0.0641538989333107
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.06506842320261436
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.07727972599296128
+    },
+    {
+     "name": "Steve Coleman",
+     "value": 0.07939311373846475
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.08502090393770674
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.4226190476190476,
+     "norm": 0.0
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 2.976190476190476,
+     "norm": 0.0
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 4.0,
+     "norm": 0.2727
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 20.05952380952381,
+     "norm": 0.7782
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 8.244047619047619,
+     "norm": 1.0
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": 0.1529,
+     "norm": 0.8076
+    }
+   ]
+  },
+  {
+   "name": "Kenny Dorham",
+   "instruments": [
+    "trumpet"
+   ],
+   "solos": 3,
+   "phrases": 43,
+   "style": "BEBOP",
+   "cluster": 1,
+   "metrics": {
+    "ttr": 0.6744186046511628,
+    "unique_ivs": 29.0,
+    "phrase_length": 22.72093023255814,
+    "cardinality": 7.883720930232558,
+    "blues_quotient": 11.627906976744185,
+    "blues_breadth": 4.0,
+    "blues_commitment": 0.5581395348837209,
+    "loading_balance": -0.1447,
+    "convergence": 0.5784
+   },
+   "anticipation_style": "REACTOR",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "complexity_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_complexity": {
+     "direction": "NONE",
+     "gravity": 0.0
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[12, 12, 12, 12, 12, 6]",
+     "count": 7,
+     "proportion": 0.16279069767441862,
+     "notes": 12
+    },
+    {
+     "rank": 2,
+     "iv": "[8, 9, 8, 8, 8, 4]",
+     "count": 4,
+     "proportion": 0.09302325581395349,
+     "notes": 10
+    },
+    {
+     "rank": 3,
+     "iv": "[10, 10, 10, 10, 10, 5]",
+     "count": 3,
+     "proportion": 0.06976744186046512,
+     "notes": 11
+    },
+    {
+     "rank": 4,
+     "iv": "[4, 3, 2, 1, 0, 0]",
+     "count": 2,
+     "proportion": 0.046511627906976744,
+     "notes": 5
+    },
+    {
+     "rank": 5,
+     "iv": "[2, 3, 3, 2, 4, 1]",
+     "count": 2,
+     "proportion": 0.046511627906976744,
+     "notes": 6
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "John Coltrane",
+     "value": 0.21951219512195122
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.21311475409836064
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.20652173913043478
+    },
+    {
+     "name": "Steve Coleman",
+     "value": 0.20588235294117646
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.18556701030927836
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Sonny Rollins",
+     "value": 0.07712794224890995
+    },
+    {
+     "name": "Steve Coleman",
+     "value": 0.07741863760382277
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.08437685000185001
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.0944700102263127
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.09516445467075711
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.6744186046511628,
+     "norm": 0.493
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 11.627906976744185,
+     "norm": 0.3832
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 4.0,
+     "norm": 0.2727
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 22.72093023255814,
+     "norm": 1.0
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 7.883720930232558,
+     "norm": 0.8693
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": -0.1447,
+     "norm": 0.0
+    }
+   ]
+  },
+  {
+   "name": "Louis Armstrong",
+   "instruments": [
+    "cornet",
+    "trumpet"
+   ],
+   "solos": 3,
+   "phrases": 32,
+   "style": "TRADITIONAL",
+   "cluster": 2,
+   "metrics": {
+    "ttr": 0.875,
+    "unique_ivs": 28.0,
+    "phrase_length": 13.3125,
+    "cardinality": 5.90625,
+    "blues_quotient": 12.5,
+    "blues_breadth": 3.0,
+    "blues_commitment": 0.53125,
+    "loading_balance": -0.0406,
+    "convergence": 0.477
+   },
+   "anticipation_style": "REACTOR",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "complexity_to_anticipation": {
+     "direction": "PROACTIVE",
+     "gravity": 0.21314692140384772
+    },
+    "length_to_complexity": {
+     "direction": "REACTIVE",
+     "gravity": -0.8423872656382859
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[1, 1, 2, 0, 1, 1]",
+     "count": 3,
+     "proportion": 0.09375,
+     "notes": 4
+    },
+    {
+     "rank": 2,
+     "iv": "[0, 3, 2, 1, 4, 0]",
+     "count": 2,
+     "proportion": 0.0625,
+     "notes": 5
+    },
+    {
+     "rank": 3,
+     "iv": "[2, 5, 4, 3, 6, 1]",
+     "count": 2,
+     "proportion": 0.0625,
+     "notes": 7
+    },
+    {
+     "rank": 4,
+     "iv": "[1, 0, 2, 2, 1, 0]",
+     "count": 1,
+     "proportion": 0.03125,
+     "notes": 4
+    },
+    {
+     "rank": 5,
+     "iv": "[12, 12, 12, 12, 12, 6]",
+     "count": 1,
+     "proportion": 0.03125,
+     "notes": 12
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "Freddie Hubbard",
+     "value": 0.2037037037037037
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.19672131147540983
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.1956521739130435
+    },
+    {
+     "name": "Wayne Shorter",
+     "value": 0.18309859154929578
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.17857142857142858
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Sonny Rollins",
+     "value": 0.11292565809611266
+    },
+    {
+     "name": "Steve Coleman",
+     "value": 0.12749287749287744
+    },
+    {
+     "name": "Freddie Hubbard",
+     "value": 0.13271813480146807
+    },
+    {
+     "name": "Don Byas",
+     "value": 0.1353968253968254
+    },
+    {
+     "name": "Eric Dolphy",
+     "value": 0.13588556505223176
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.875,
+     "norm": 0.8858
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 12.5,
+     "norm": 0.4218
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 3.0,
+     "norm": 0.1818
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 13.3125,
+     "norm": 0.2159
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 5.90625,
+     "norm": 0.1519
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": -0.0406,
+     "norm": 0.2825
+    }
+   ]
+  },
+  {
+   "name": "Miles Davis",
+   "instruments": [
+    "trumpet"
+   ],
+   "solos": 6,
+   "phrases": 162,
+   "style": "HARDBOP",
+   "cluster": 2,
+   "metrics": {
+    "ttr": 0.5308641975308642,
+    "unique_ivs": 86.0,
+    "phrase_length": 10.722222222222221,
+    "cardinality": 5.487654320987654,
+    "blues_quotient": 22.22222222222222,
+    "blues_breadth": 12.0,
+    "blues_commitment": 0.9135802469135802,
+    "loading_balance": 0.2238,
+    "convergence": 0.4688
+   },
+   "anticipation_style": "ANTICIPATOR",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "complexity_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_complexity": {
+     "direction": "NONE",
+     "gravity": 0.0
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[2, 2, 2, 2, 2, 0]",
+     "count": 7,
+     "proportion": 0.043209876543209874,
+     "notes": 5
+    },
+    {
+     "rank": 2,
+     "iv": "[0, 1, 0, 0, 0, 0]",
+     "count": 6,
+     "proportion": 0.037037037037037035,
+     "notes": 2
+    },
+    {
+     "rank": 3,
+     "iv": "[0, 2, 1, 1, 2, 0]",
+     "count": 5,
+     "proportion": 0.030864197530864196,
+     "notes": 4
+    },
+    {
+     "rank": 4,
+     "iv": "[10, 10, 10, 10, 10, 5]",
+     "count": 5,
+     "proportion": 0.030864197530864196,
+     "notes": 11
+    },
+    {
+     "rank": 5,
+     "iv": "[1, 1, 1, 1, 2, 0]",
+     "count": 5,
+     "proportion": 0.030864197530864196,
+     "notes": 4
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "Sonny Rollins",
+     "value": 0.423728813559322
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.37735849056603776
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.3652173913043478
+    },
+    {
+     "name": "Wayne Shorter",
+     "value": 0.33962264150943394
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.297029702970297
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "J.J. Johnson",
+     "value": 0.07323892519970952
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.07431322583071553
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.07560068675037811
+    },
+    {
+     "name": "Freddie Hubbard",
+     "value": 0.07600075273686387
+    },
+    {
+     "name": "Steve Coleman",
+     "value": 0.08261695363144637
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.5308641975308642,
+     "norm": 0.2119
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 22.22222222222222,
+     "norm": 0.8524
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 12.0,
+     "norm": 1.0
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 10.722222222222221,
+     "norm": 0.0
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 5.487654320987654,
+     "norm": 0.0
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": 0.2238,
+     "norm": 1.0
+    }
+   ]
+  },
+  {
+   "name": "Sonny Rollins",
+   "instruments": [
+    "tenor saxophone"
+   ],
+   "solos": 7,
+   "phrases": 184,
+   "style": "HARDBOP",
+   "cluster": 3,
+   "metrics": {
+    "ttr": 0.44565217391304346,
+    "unique_ivs": 82.0,
+    "phrase_length": 17.14673913043478,
+    "cardinality": 6.260869565217392,
+    "blues_quotient": 16.304347826086957,
+    "blues_breadth": 11.0,
+    "blues_commitment": 0.6630434782608695,
+    "loading_balance": 0.0507,
+    "convergence": 0.5336
+   },
+   "anticipation_style": "BALANCED",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": -0.04041849526277183
+    },
+    "complexity_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.777366804559486
+    },
+    "length_to_complexity": {
+     "direction": "NONE",
+     "gravity": 0.522264534147762
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[8, 8, 8, 8, 9, 4]",
+     "count": 10,
+     "proportion": 0.05434782608695652,
+     "notes": 10
+    },
+    {
+     "rank": 2,
+     "iv": "[4, 6, 5, 5, 6, 2]",
+     "count": 7,
+     "proportion": 0.03804347826086957,
+     "notes": 8
+    },
+    {
+     "rank": 3,
+     "iv": "[1, 0, 1, 3, 1, 0]",
+     "count": 6,
+     "proportion": 0.03260869565217391,
+     "notes": 4
+    },
+    {
+     "rank": 4,
+     "iv": "[12, 12, 12, 12, 12, 6]",
+     "count": 6,
+     "proportion": 0.03260869565217391,
+     "notes": 12
+    },
+    {
+     "rank": 5,
+     "iv": "[6, 7, 7, 6, 7, 3]",
+     "count": 6,
+     "proportion": 0.03260869565217391,
+     "notes": 9
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "Miles Davis",
+     "value": 0.423728813559322
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.4166666666666667
+    },
+    {
+     "name": "Wayne Shorter",
+     "value": 0.36633663366336633
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.3523809523809524
+    },
+    {
+     "name": "Steve Coleman",
+     "value": 0.3106796116504854
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Steve Coleman",
+     "value": 0.06358890972861563
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.0641538989333107
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.06979876293951927
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.07004332672436125
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.07431322583071553
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.44565217391304346,
+     "norm": 0.0451
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 16.304347826086957,
+     "norm": 0.5903
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 11.0,
+     "norm": 0.9091
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 17.14673913043478,
+     "norm": 0.5354
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 6.260869565217392,
+     "norm": 0.2805
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": 0.0507,
+     "norm": 0.5303
+    }
+   ]
+  },
+  {
+   "name": "Steve Coleman",
+   "instruments": [
+    "alto saxophone"
+   ],
+   "solos": 3,
+   "phrases": 89,
+   "style": "POSTBOP",
+   "cluster": 1,
+   "metrics": {
+    "ttr": 0.5955056179775281,
+    "unique_ivs": 53.0,
+    "phrase_length": 19.584269662921347,
+    "cardinality": 8.146067415730338,
+    "blues_quotient": 6.741573033707865,
+    "blues_breadth": 5.0,
+    "blues_commitment": 0.2696629213483146,
+    "loading_balance": 0.03,
+    "convergence": 0.5535
+   },
+   "anticipation_style": "REACTOR",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "complexity_to_anticipation": {
+     "direction": "PROACTIVE",
+     "gravity": 0.8139086514227748
+    },
+    "length_to_complexity": {
+     "direction": "REACTIVE",
+     "gravity": -0.7070113168401273
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[10, 10, 10, 10, 10, 5]",
+     "count": 15,
+     "proportion": 0.16853932584269662,
+     "notes": 11
+    },
+    {
+     "rank": 2,
+     "iv": "[12, 12, 12, 12, 12, 6]",
+     "count": 11,
+     "proportion": 0.12359550561797752,
+     "notes": 12
+    },
+    {
+     "rank": 3,
+     "iv": "[1, 4, 3, 2, 4, 1]",
+     "count": 4,
+     "proportion": 0.0449438202247191,
+     "notes": 6
+    },
+    {
+     "rank": 4,
+     "iv": "[8, 7, 6, 6, 6, 3]",
+     "count": 3,
+     "proportion": 0.033707865168539325,
+     "notes": 9
+    },
+    {
+     "rank": 5,
+     "iv": "[4, 6, 5, 5, 6, 2]",
+     "count": 3,
+     "proportion": 0.033707865168539325,
+     "notes": 8
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "J.J. Johnson",
+     "value": 0.313953488372093
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.3106796116504854
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.30526315789473685
+    },
+    {
+     "name": "Charlie Parker",
+     "value": 0.2923076923076923
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.28703703703703703
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Sonny Rollins",
+     "value": 0.06358890972861563
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.07062269903825877
+    },
+    {
+     "name": "Kenny Dorham",
+     "value": 0.07741863760382277
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.07839529914529915
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.07939311373846475
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.5955056179775281,
+     "norm": 0.3385
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 6.741573033707865,
+     "norm": 0.1668
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 5.0,
+     "norm": 0.3636
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 19.584269662921347,
+     "norm": 0.7386
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 8.146067415730338,
+     "norm": 0.9645
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": 0.03,
+     "norm": 0.4741
+    }
+   ]
+  },
+  {
+   "name": "Wayne Shorter",
+   "instruments": [
+    "tenor saxophone"
+   ],
+   "solos": 3,
+   "phrases": 90,
+   "style": "HARDBOP",
+   "cluster": 2,
+   "metrics": {
+    "ttr": 0.6222222222222222,
+    "unique_ivs": 56.0,
+    "phrase_length": 12.088888888888889,
+    "cardinality": 5.988888888888889,
+    "blues_quotient": 25.555555555555554,
+    "blues_breadth": 8.0,
+    "blues_commitment": 0.9555555555555556,
+    "loading_balance": 0.0073,
+    "convergence": 0.4879
+   },
+   "anticipation_style": "REACTOR",
+   "granger": {
+    "complexity_to_blues": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "complexity_to_anticipation": {
+     "direction": "NONE",
+     "gravity": 0.0
+    },
+    "length_to_complexity": {
+     "direction": "NONE",
+     "gravity": -0.5881953281712041
+    }
+   },
+   "top_ivs": [
+    {
+     "rank": 1,
+     "iv": "[0, 1, 1, 0, 1, 0]",
+     "count": 12,
+     "proportion": 0.13333333333333333,
+     "notes": 3
+    },
+    {
+     "rank": 2,
+     "iv": "[2, 5, 4, 3, 6, 1]",
+     "count": 8,
+     "proportion": 0.08888888888888889,
+     "notes": 7
+    },
+    {
+     "rank": 3,
+     "iv": "[0, 3, 2, 1, 4, 0]",
+     "count": 4,
+     "proportion": 0.044444444444444446,
+     "notes": 5
+    },
+    {
+     "rank": 4,
+     "iv": "[6, 7, 6, 6, 8, 3]",
+     "count": 3,
+     "proportion": 0.03333333333333333,
+     "notes": 9
+    },
+    {
+     "rank": 5,
+     "iv": "[1, 1, 1, 0, 0, 0]",
+     "count": 3,
+     "proportion": 0.03333333333333333,
+     "notes": 3
+    }
+   ],
+   "similar_vocabulary": [
+    {
+     "name": "Sonny Rollins",
+     "value": 0.36633663366336633
+    },
+    {
+     "name": "J.J. Johnson",
+     "value": 0.3488372093023256
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.33962264150943394
+    },
+    {
+     "name": "Freddie Hubbard",
+     "value": 0.32857142857142857
+    },
+    {
+     "name": "John Coltrane",
+     "value": 0.3229166666666667
+    }
+   ],
+   "similar_trajectory": [
+    {
+     "name": "Eric Dolphy",
+     "value": 0.06854322013161789
+    },
+    {
+     "name": "Branford Marsalis",
+     "value": 0.07247318238340336
+    },
+    {
+     "name": "Sonny Rollins",
+     "value": 0.07799980797074493
+    },
+    {
+     "name": "Miles Davis",
+     "value": 0.0848272015936227
+    },
+    {
+     "name": "Freddie Hubbard",
+     "value": 0.08775935968615528
+    }
+   ],
+   "radar": [
+    {
+     "key": "ttr",
+     "label": "Vocabulary diversity",
+     "note": "type-token ratio",
+     "raw": 0.6222222222222222,
+     "norm": 0.3908
+    },
+    {
+     "key": "blues_quotient",
+     "label": "Blues quotient",
+     "note": "% of phrases using canonical blues IVs",
+     "raw": 25.555555555555554,
+     "norm": 1.0
+    },
+    {
+     "key": "blues_breadth",
+     "label": "Blues breadth",
+     "note": "distinct blues IVs deployed",
+     "raw": 8.0,
+     "norm": 0.6364
+    },
+    {
+     "key": "phrase_length",
+     "label": "Phrase length",
+     "note": "mean notes per phrase",
+     "raw": 12.088888888888889,
+     "norm": 0.1139
+    },
+    {
+     "key": "cardinality",
+     "label": "Harmonic density",
+     "note": "mean pitch classes per phrase",
+     "raw": 5.988888888888889,
+     "norm": 0.1818
+    },
+    {
+     "key": "loading_balance",
+     "label": "Anticipation",
+     "note": "front-loaded (+) vs back-loaded (-)",
+     "raw": 0.0073,
+     "norm": 0.4125
+    }
+   ]
+  }
+ ]
+}
