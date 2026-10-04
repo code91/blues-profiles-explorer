@@ -46,6 +46,14 @@ blues = {a['performer']: a for a in load(os.path.join(A, 'blues_stats.json'))['a
 antic = {a['performer']: a for a in load(os.path.join(A, 'anticipation_stats.json'))['artist_profiles']}
 clusters = load(os.path.join(A, 'cluster_analysis.json'))
 
+# What the study found does and does not survive its baselines. The page states
+# these alongside the numbers, so a reader cannot take a panel for a finding the
+# paper withdrew.
+checks_path = os.path.join(A, 'nesting_and_blues_null.json')
+checks = load(checks_path) if os.path.exists(checks_path) else {}
+rarefied = (checks.get('ttr_rarefaction') or {}).get('artists', {})
+blues_null = (checks.get('blues_null') or {}).get('artists', {})
+
 # Phrase-level series, averaged per artist. Entropy is the complexity measure
 # the IV sum is not; density is that sum, named for what it measures.
 series = defaultdict(lambda: defaultdict(list))
@@ -130,6 +138,10 @@ for name in sorted(vocab):
             'density': mean_of(name, 'density'),
             'entropy': mean_of(name, 'entropy'),
             'dissonance_ratio': mean_of(name, 'dissonance_ratio'),
+            'ttr_rarefied': (rarefied.get(name) or {}).get('rarefied_mean'),
+            'ttr_rarefied_lo': (rarefied.get(name) or {}).get('ci_low'),
+            'ttr_rarefied_hi': (rarefied.get(name) or {}).get('ci_high'),
+            'blues_null_z': (blues_null.get(name) or {}).get('z'),
             'blues_quotient': num(b.get('blues_quotient')),
             'blues_breadth': num(b.get('blues_vocabulary_breadth')),
             'blues_commitment': num(b.get('blues_commitment_normalized')),
@@ -180,7 +192,21 @@ for a in artists:
                            'raw': raw, 'norm': round(norm, 4)})
 
 out = {
-    'generated_from': 'blues-profiles analysis outputs (scripts 01-09)',
+    'generated_from': 'blues-profiles analysis outputs (scripts 01-12)',
+    'survives': {
+        'iv_distributions': 'differ between artists, eta2 = 0.12, p = .003 (solo-level permutation)',
+        'identity_above_style': 'p = .006 holding historical style constant',
+        'attribution': '22.9% held-out against 7.6% permuted, p = .005',
+        'dissonance_ratio': 'exceeds the chord-scale null, z = +5.03',
+    },
+    'does_not_survive': {
+        'phrase_length': 'p = .17 once the independent unit is the solo',
+        'ttr': 'raw spread 0.42-0.93 compresses to 0.71-0.93 when rarefied; ten of thirteen reorder',
+        'blues_vocabulary': 'z = -0.22 against the chord-scale null',
+        'entropy': 'z = -0.48 against the chord-scale null',
+        'density': 'tautological, C(n,2) in the pitch-class count',
+        'granger': '13 of 182 tests at p < .05 against ~9 expected; none survives correction',
+    },
     'corpus': {
         'solos': len(meta),
         'artists': len(artists),

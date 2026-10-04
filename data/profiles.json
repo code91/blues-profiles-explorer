@@ -1,5 +1,19 @@
 {
- "generated_from": "blues-profiles analysis outputs (scripts 01-09)",
+ "generated_from": "blues-profiles analysis outputs (scripts 01-12)",
+ "survives": {
+  "iv_distributions": "differ between artists, eta2 = 0.12, p = .003 (solo-level permutation)",
+  "identity_above_style": "p = .006 holding historical style constant",
+  "attribution": "22.9% held-out against 7.6% permuted, p = .005",
+  "dissonance_ratio": "exceeds the chord-scale null, z = +5.03"
+ },
+ "does_not_survive": {
+  "phrase_length": "p = .17 once the independent unit is the solo",
+  "ttr": "raw spread 0.42-0.93 compresses to 0.71-0.93 when rarefied; ten of thirteen reorder",
+  "blues_vocabulary": "z = -0.22 against the chord-scale null",
+  "entropy": "z = -0.48 against the chord-scale null",
+  "density": "tautological, C(n,2) in the pitch-class count",
+  "granger": "13 of 182 tests at p < .05 against ~9 expected; none survives correction"
+ },
  "corpus": {
   "solos": 48,
   "artists": 13,
@@ -89,6 +103,10 @@
     "density": 24.373333333333335,
     "entropy": 2.272311072254824,
     "dissonance_ratio": 0.34568417508417504,
+    "ttr_rarefied": 0.7845517241379311,
+    "ttr_rarefied_lo": 0.6551724137931034,
+    "ttr_rarefied_hi": 0.896551724137931,
+    "blues_null_z": 1.3200940574483704,
     "blues_quotient": 14.666666666666666,
     "blues_breadth": 7.0,
     "blues_commitment": 0.72,
@@ -107,7 +125,7 @@
     },
     "length_to_density": {
      "direction": "REACTIVE",
-     "gravity": -0.9094667020753335
+     "gravity": -0.9218603023692924
     },
     "density_to_bluesiness": {
      "direction": "NONE",
@@ -123,7 +141,7 @@
     },
     "length_to_bluesiness": {
      "direction": "NONE",
-     "gravity": 0.6477289797834782
+     "gravity": 0.6820763579513769
     }
    },
    "portrait": {
@@ -275,6 +293,10 @@
     "density": 28.568181818181817,
     "entropy": 2.448891139374989,
     "dissonance_ratio": 0.3211696510560147,
+    "ttr_rarefied": 0.7667068965517241,
+    "ttr_rarefied_lo": 0.6896551724137931,
+    "ttr_rarefied_hi": 0.8620689655172413,
+    "blues_null_z": 1.5714772223868418,
     "blues_quotient": 11.363636363636363,
     "blues_breadth": 3.0,
     "blues_commitment": 0.5,
@@ -461,6 +483,10 @@
     "density": 19.8,
     "entropy": 2.316677989372382,
     "dissonance_ratio": 0.3328458393458394,
+    "ttr_rarefied": 0.9310344827586207,
+    "ttr_rarefied_lo": 0.9310344827586207,
+    "ttr_rarefied_hi": 0.9310344827586207,
+    "blues_null_z": -1.4481529764711951,
     "blues_quotient": 3.3333333333333335,
     "blues_breadth": 1.0,
     "blues_commitment": 0.16666666666666666,
@@ -470,32 +496,32 @@
    "anticipation_style": "BALANCED",
    "granger": {
     "density_to_dissonance": {
-     "direction": "REACTIVE",
-     "gravity": -0.7558278886028752
+     "direction": "NONE",
+     "gravity": 0.0
     },
     "density_to_anticipation": {
-     "direction": "REACTIVE",
-     "gravity": -0.7908597427002941
+     "direction": "NONE",
+     "gravity": 0.0
     },
     "length_to_density": {
      "direction": "NONE",
      "gravity": 0.0
     },
     "density_to_bluesiness": {
-     "direction": "PROACTIVE",
-     "gravity": 0.5857793117559478
+     "direction": "NONE",
+     "gravity": -0.8360055793808582
     },
     "entropy_to_bluesiness": {
-     "direction": "BIDIRECTIONAL",
-     "gravity": 0.6221113407442218
+     "direction": "NONE",
+     "gravity": 0.0
     },
     "dissonance_to_bluesiness": {
-     "direction": "PROACTIVE",
-     "gravity": 0.9120315223520601
+     "direction": "NONE",
+     "gravity": 0.0
     },
     "length_to_bluesiness": {
-     "direction": "PROACTIVE",
-     "gravity": 0.8927410596692449
+     "direction": "NONE",
+     "gravity": 0.0
     }
    },
    "portrait": {
@@ -648,6 +674,10 @@
     "density": 29.64835164835165,
     "entropy": 2.3173995001823737,
     "dissonance_ratio": 0.334510965225251,
+    "ttr_rarefied": 0.7525172413793103,
+    "ttr_rarefied_lo": 0.6206896551724138,
+    "ttr_rarefied_hi": 0.896551724137931,
+    "blues_null_z": -1.7563411393093369,
     "blues_quotient": 3.296703296703297,
     "blues_breadth": 2.0,
     "blues_commitment": 0.16483516483516483,
@@ -661,8 +691,8 @@
      "gravity": 0.0
     },
     "density_to_anticipation": {
-     "direction": "PROACTIVE",
-     "gravity": 0.7399225774530522
+     "direction": "NONE",
+     "gravity": 0.8504167436938296
     },
     "length_to_density": {
      "direction": "NONE",
@@ -670,7 +700,7 @@
     },
     "density_to_bluesiness": {
      "direction": "NONE",
-     "gravity": 0.4662812981130795
+     "gravity": 0.0
     },
     "entropy_to_bluesiness": {
      "direction": "NONE",
@@ -682,7 +712,7 @@
     },
     "length_to_bluesiness": {
      "direction": "NONE",
-     "gravity": 0.5360828373416413
+     "gravity": 0.0
     }
    },
    "portrait": {
@@ -834,6 +864,10 @@
     "density": 22.06896551724138,
     "entropy": 2.329524456610424,
     "dissonance_ratio": 0.3055526944320047,
+    "ttr_rarefied": 0.7686896551724138,
+    "ttr_rarefied_lo": 0.6551724137931034,
+    "ttr_rarefied_hi": 0.8620689655172413,
+    "blues_null_z": 0.580429492463921,
     "blues_quotient": 15.517241379310345,
     "blues_breadth": 5.0,
     "blues_commitment": 0.7931034482758621,
@@ -844,11 +878,11 @@
    "granger": {
     "density_to_dissonance": {
      "direction": "NONE",
-     "gravity": 0.0
+     "gravity": 0.8742375598248701
     },
     "density_to_anticipation": {
-     "direction": "PROACTIVE",
-     "gravity": 0.8463248858951424
+     "direction": "NONE",
+     "gravity": 0.0
     },
     "length_to_density": {
      "direction": "NONE",
@@ -856,15 +890,15 @@
     },
     "density_to_bluesiness": {
      "direction": "PROACTIVE",
-     "gravity": 0.8633057357678908
+     "gravity": 0.9708822544562316
     },
     "entropy_to_bluesiness": {
      "direction": "REACTIVE",
-     "gravity": -0.8902013106542191
+     "gravity": -0.8254964458881762
     },
     "dissonance_to_bluesiness": {
      "direction": "REACTIVE",
-     "gravity": -0.5095046551239194
+     "gravity": -0.6316864902736835
     },
     "length_to_bluesiness": {
      "direction": "NONE",
@@ -1020,6 +1054,10 @@
     "density": 20.375,
     "entropy": 2.2485040101639244,
     "dissonance_ratio": 0.3378097596847597,
+    "ttr_rarefied": 0.8408620689655172,
+    "ttr_rarefied_lo": 0.7241379310344828,
+    "ttr_rarefied_hi": 0.9655172413793104,
+    "blues_null_z": -1.3147847967098754,
     "blues_quotient": 8.653846153846153,
     "blues_breadth": 7.0,
     "blues_commitment": 0.41346153846153844,
@@ -1037,8 +1075,8 @@
      "gravity": 0.0
     },
     "length_to_density": {
-     "direction": "REACTIVE",
-     "gravity": -0.20345384151251122
+     "direction": "NONE",
+     "gravity": 0.0
     },
     "density_to_bluesiness": {
      "direction": "NONE",
@@ -1206,6 +1244,10 @@
     "density": 32.767857142857146,
     "entropy": 2.4389985642625076,
     "dissonance_ratio": 0.32785473785473784,
+    "ttr_rarefied": 0.7097758620689655,
+    "ttr_rarefied_lo": 0.5862068965517241,
+    "ttr_rarefied_hi": 0.8620689655172413,
+    "blues_null_z": -1.9756438566993697,
     "blues_quotient": 2.976190476190476,
     "blues_breadth": 4.0,
     "blues_commitment": 0.15476190476190477,
@@ -1223,8 +1265,8 @@
      "gravity": 0.0
     },
     "length_to_density": {
-     "direction": "PROACTIVE",
-     "gravity": 0.8406383823157089
+     "direction": "NONE",
+     "gravity": 0.0
     },
     "density_to_bluesiness": {
      "direction": "NONE",
@@ -1235,8 +1277,8 @@
      "gravity": 0.0
     },
     "dissonance_to_bluesiness": {
-     "direction": "BIDIRECTIONAL",
-     "gravity": -0.08686879137537826
+     "direction": "NONE",
+     "gravity": 0.0
     },
     "length_to_bluesiness": {
      "direction": "NONE",
@@ -1392,6 +1434,10 @@
     "density": 31.209302325581394,
     "entropy": 2.336486289133512,
     "dissonance_ratio": 0.33247374072955466,
+    "ttr_rarefied": 0.7307758620689655,
+    "ttr_rarefied_lo": 0.6206896551724138,
+    "ttr_rarefied_hi": 0.8275862068965517,
+    "blues_null_z": 0.1478514253525705,
     "blues_quotient": 11.627906976744185,
     "blues_breadth": 4.0,
     "blues_commitment": 0.5581395348837209,
@@ -1426,7 +1472,7 @@
     },
     "length_to_bluesiness": {
      "direction": "NONE",
-     "gravity": 0.5467370748909516
+     "gravity": 0.0
     }
    },
    "portrait": {
@@ -1579,6 +1625,10 @@
     "density": 16.8125,
     "entropy": 2.260809237825902,
     "dissonance_ratio": 0.31839962121212123,
+    "ttr_rarefied": 0.8843448275862069,
+    "ttr_rarefied_lo": 0.8620689655172413,
+    "ttr_rarefied_hi": 0.9310344827586207,
+    "blues_null_z": -0.9302503262480353,
     "blues_quotient": 12.5,
     "blues_breadth": 3.0,
     "blues_commitment": 0.53125,
@@ -1589,19 +1639,19 @@
    "granger": {
     "density_to_dissonance": {
      "direction": "NONE",
-     "gravity": -0.8872953662246711
+     "gravity": 0.0
     },
     "density_to_anticipation": {
      "direction": "PROACTIVE",
-     "gravity": 0.16798200597886412
+     "gravity": 0.2921237561013699
     },
     "length_to_density": {
      "direction": "REACTIVE",
-     "gravity": -0.8678504054227025
+     "gravity": -0.9894429899416579
     },
     "density_to_bluesiness": {
-     "direction": "NONE",
-     "gravity": 0.0
+     "direction": "REACTIVE",
+     "gravity": -0.8435692167321553
     },
     "entropy_to_bluesiness": {
      "direction": "NONE",
@@ -1613,7 +1663,7 @@
     },
     "length_to_bluesiness": {
      "direction": "NONE",
-     "gravity": -0.7560631043033273
+     "gravity": 0.0
     }
    },
    "portrait": {
@@ -1765,6 +1815,10 @@
     "density": 15.302469135802468,
     "entropy": 1.9973411375939076,
     "dissonance_ratio": 0.3188160707605152,
+    "ttr_rarefied": 0.8652413793103448,
+    "ttr_rarefied_lo": 0.7586206896551724,
+    "ttr_rarefied_hi": 0.9655172413793104,
+    "blues_null_z": 1.591212221214536,
     "blues_quotient": 22.22222222222222,
     "blues_breadth": 12.0,
     "blues_commitment": 0.9135802469135802,
@@ -1786,12 +1840,12 @@
      "gravity": 0.0
     },
     "density_to_bluesiness": {
-     "direction": "PROACTIVE",
-     "gravity": 0.8816435903854176
+     "direction": "NONE",
+     "gravity": 0.8691051710026101
     },
     "entropy_to_bluesiness": {
      "direction": "NONE",
-     "gravity": 0.0
+     "gravity": -0.763921758700271
     },
     "dissonance_to_bluesiness": {
      "direction": "NONE",
@@ -1799,7 +1853,7 @@
     },
     "length_to_bluesiness": {
      "direction": "PROACTIVE",
-     "gravity": 0.9433041086112057
+     "gravity": 0.9663230924942278
     }
    },
    "portrait": {
@@ -1951,6 +2005,10 @@
     "density": 20.233695652173914,
     "entropy": 2.120533608470907,
     "dissonance_ratio": 0.30528448302904826,
+    "ttr_rarefied": 0.8294827586206897,
+    "ttr_rarefied_lo": 0.7241379310344828,
+    "ttr_rarefied_hi": 0.9310344827586207,
+    "blues_null_z": -0.09026242934821273,
     "blues_quotient": 16.304347826086957,
     "blues_breadth": 11.0,
     "blues_commitment": 0.6630434782608695,
@@ -1960,8 +2018,8 @@
    "anticipation_style": "BALANCED",
    "granger": {
     "density_to_dissonance": {
-     "direction": "REACTIVE",
-     "gravity": -0.7434461728832344
+     "direction": "NONE",
+     "gravity": 0.0
     },
     "density_to_anticipation": {
      "direction": "NONE",
@@ -1980,8 +2038,8 @@
      "gravity": 0.0
     },
     "dissonance_to_bluesiness": {
-     "direction": "REACTIVE",
-     "gravity": -0.7486120223498217
+     "direction": "NONE",
+     "gravity": 0.0
     },
     "length_to_bluesiness": {
      "direction": "NONE",
@@ -2137,6 +2195,10 @@
     "density": 32.93258426966292,
     "entropy": 2.3723882009890516,
     "dissonance_ratio": 0.3372007393355708,
+    "ttr_rarefied": 0.7201206896551724,
+    "ttr_rarefied_lo": 0.5862068965517241,
+    "ttr_rarefied_hi": 0.8620689655172413,
+    "blues_null_z": -0.5305740823749145,
     "blues_quotient": 6.741573033707865,
     "blues_breadth": 5.0,
     "blues_commitment": 0.2696629213483146,
@@ -2151,11 +2213,11 @@
     },
     "density_to_anticipation": {
      "direction": "PROACTIVE",
-     "gravity": 0.8183540282753438
+     "gravity": 0.8719366543989165
     },
     "length_to_density": {
      "direction": "REACTIVE",
-     "gravity": -0.8273698797374298
+     "gravity": -0.8209638788308903
     },
     "density_to_bluesiness": {
      "direction": "NONE",
@@ -2163,11 +2225,11 @@
     },
     "entropy_to_bluesiness": {
      "direction": "NONE",
-     "gravity": 0.0
+     "gravity": -0.884413456016466
     },
     "dissonance_to_bluesiness": {
      "direction": "PROACTIVE",
-     "gravity": 0.8137127874894632
+     "gravity": 0.8856058206601891
     },
     "length_to_bluesiness": {
      "direction": "NONE",
@@ -2323,6 +2385,10 @@
     "density": 18.033333333333335,
     "entropy": 2.1370182434875398,
     "dissonance_ratio": 0.2898314894981562,
+    "ttr_rarefied": 0.7754655172413794,
+    "ttr_rarefied_lo": 0.6206896551724138,
+    "ttr_rarefied_hi": 0.896551724137931,
+    "blues_null_z": 1.2986468712162524,
     "blues_quotient": 25.555555555555554,
     "blues_breadth": 8.0,
     "blues_commitment": 0.9555555555555556,
@@ -2349,11 +2415,11 @@
     },
     "entropy_to_bluesiness": {
      "direction": "REACTIVE",
-     "gravity": -0.7648100100661543
+     "gravity": -0.9608588871956296
     },
     "dissonance_to_bluesiness": {
-     "direction": "PROACTIVE",
-     "gravity": 0.4894329498532229
+     "direction": "REACTIVE",
+     "gravity": -0.6956241860212885
     },
     "length_to_bluesiness": {
      "direction": "NONE",

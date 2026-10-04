@@ -1,4 +1,4 @@
-# Blues Profiles explorer
+# Blues Connotation explorer
 
 An interactive view of cross-artist profiles of improvisational decision-making on blues
 form: 48 solos by 13 artists (1,170 phrases) drawn from the
@@ -23,11 +23,32 @@ Companion to the analysis pipeline in
 - **Frequent intervals**: the five interval vectors each artist uses most, with the number of
   pitch classes each implies.
 - **Causality**: whether one quantity in a phrase predicts another in the phrase that follows,
-  as a direction (proactive / reactive / none) and a signed gravity. Note that *density* is the
+  as a direction and a signed gravity. **None of these survives correction** and the paper
+  reports the analysis as a null: across 182 tests thirteen reach p < .05 where roughly nine
+  are expected from noise, and none survives false discovery rate correction at any lag. The
+  cells are shown for inspection, not as findings. Note that *density* is the
   sum of the interval vector, which equals C(n,2) in the number of distinct pitch classes and so
   measures how many notes a phrase uses, not how complex it is. Interval entropy is the measure
   that is not reducible to set size. Dissonance is reported as a ratio to density, because the
   raw figures correlate at r = 0.99 by construction.
+
+## What the study could and could not defend
+
+The companion paper tests every candidate measure against the baseline appropriate to it. Four
+claims survive: interval vector distributions differ between artists (eta squared 0.12,
+p = .003 permuting whole solos rather than phrases), that difference persists with historical
+style held constant (p = .006), a held-out classifier attributes unseen solos at about three
+times chance (22.9%, p = .005), and the dissonance ratio exceeds a chord-scale null.
+
+Six do not. Phrase length is indistinguishable from chance once the solo is the independent
+unit (p = .17); blues-catalogue membership occurs no more often than the chord changes alone
+produce (z = -0.22); interval entropy likewise (z = -0.48); density is tautological, being
+C(n,2) in the pitch-class count; type-token ratio reorders ten of thirteen artists when every
+artist is sampled to the same 29 phrases; and phrase-to-phrase Granger dependence is absent.
+
+This page shows all of them, because browsing the corpus is useful regardless. It states
+beside each panel which is which, so nothing here should be mistaken for a finding the paper
+withdrew.
 
 ## A caveat worth reading
 

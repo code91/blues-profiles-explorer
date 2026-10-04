@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blues Profiles explorer</title>
+<title>Blues Connotation explorer</title>
 <meta name="description" content="Cross-artist profiles of improvisational decision-making on blues form, from 48 solos in the Weimar Jazz Database.">
 <link rel="stylesheet" href="style.css">
 <script>
@@ -23,7 +23,7 @@
   <header>
     <div class="head-row">
       <div>
-        <h1>Blues Profiles</h1>
+        <h1>Blues Connotation</h1>
         <p id="corpus-line">Loading…</p>
       </div>
       <button type="button" id="theme" class="theme-btn" aria-pressed="false"
@@ -50,6 +50,7 @@
       <p class="sub">Each axis is min-max normalised across the thirteen artists, so a point means
          “relative to the others in this corpus”, not an absolute score. Raw values below.</p>
       <svg class="radar" id="radar" viewBox="0 0 460 340" role="img" aria-label="Radar chart of profile metrics"></svg>
+      <p class="sub" id="profile-note"></p>
       <table class="axes">
         <thead><tr><th>Axis</th><th>Measure</th><th>Value</th></tr></thead>
         <tbody id="axes-body"></tbody>

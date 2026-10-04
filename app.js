@@ -53,9 +53,26 @@
     });
     svg.innerHTML = parts.join('');
 
+    // Which of these axes the study could actually defend, stated where the
+    // numbers are read rather than buried in a caption.
+    var note = document.getElementById('profile-note');
+    if (note && DATA && DATA.does_not_survive) {
+      note.innerHTML = 'Of these six, only interval content distinguishes artists once baselines are ' +
+        'applied. Blues quotient and interval entropy do not exceed what the chord changes alone produce, ' +
+        'phrase length is indistinguishable from chance when solos rather than phrases are the unit, and ' +
+        'vocabulary diversity reorders when every artist is sampled to the same number of phrases.';
+    }
+
     $('axes-body').innerHTML = axes.map(function (ax) {
+      var extra = '';
+      if (ax.key === 'ttr' && artist.metrics && artist.metrics.ttr_rarefied != null) {
+        // The raw ratio falls as a player contributes more phrases, so the value
+        // at a common 29-phrase sample is the comparable one.
+        extra = ' <span style="color:var(--text-muted)">(' +
+                fmt(artist.metrics.ttr_rarefied, 2) + ' rarefied)</span>';
+      }
       return '<tr><td>' + esc(ax.label) + '</td><td style="color:var(--text-secondary)">' +
-             esc(ax.note) + '</td><td>' + fmt(ax.raw, ax.key === 'ttr' ? 3 : 2) + '</td></tr>';
+             esc(ax.note) + '</td><td>' + fmt(ax.raw, ax.key === 'ttr' ? 3 : 2) + extra + '</td></tr>';
     }).join('');
   }
 
@@ -92,13 +109,18 @@
   var PANELS = {
     vocab: {
       title: 'Closest vocabulary',
-      sub: 'Jaccard overlap between the sets of interval vectors each artist uses. Higher is more alike.',
+      sub: 'Jaccard overlap between the sets of interval vectors each artist uses. Higher is more alike. ' +
+           'Interval vector distributions are the one artist-level difference that survives the study\u2019s baselines ' +
+           '(eta squared 0.12, p = .003 permuting whole solos rather than phrases).',
       render: function (a) { return bars(a.similar_vocabulary, {}); }
     },
     traj: {
       title: 'Closest trajectory',
-      sub: 'Dynamic time warping distance between complexity trajectories across a solo. ' +
-           'This is a distance, so lower is more alike, and the bars are drawn inverted to read the same way as the others.',
+      exploratory: true,
+      sub: 'Dynamic time warping distance between density trajectories across a solo. ' +
+           'This is a distance, so lower is more alike, and the bars are drawn inverted to read the same way as the others. ' +
+           'Exploratory: the trajectory analysis was dropped from the paper because the clustering was descriptive ' +
+           'rather than testable. It is kept here because it is still a reasonable way to browse the corpus.',
       render: function (a) { return bars(a.similar_trajectory, { invert: true }); }
     },
     ivs: {
@@ -122,11 +144,11 @@
       title: 'Phrase-to-phrase causality',
       sub: 'Does one quantity in a phrase predict another in the phrase that follows? ' +
            'PROACTIVE means the first leads the second; REACTIVE means it trails it. ' +
-           'Gravity is the signed strength of the lead. Density is the sum of the interval ' +
-           'vector, which equals C(n,2) in the number of distinct pitch classes, so it measures ' +
-           'how many notes a phrase uses rather than how complex it is. Interval entropy is the ' +
-           'measure that is not reducible to size. Dissonance is divided by density for the same ' +
-           'reason: the raw figures correlate at r = 0.99 by construction.',
+           'Gravity is the signed strength of the lead. NOTE: none of these relationships survives ' +
+           'correction. Across 182 tests, thirteen reach p < .05 where roughly nine are expected from ' +
+           'noise, and none survives false discovery rate correction at any lag from one to four. ' +
+           'The paper reports this as a null result. Individual cells are shown for inspection, ' +
+           'not as findings.',
       render: function (a) {
         var LABELS = {
           density_to_bluesiness: 'Density → blues vocabulary',
